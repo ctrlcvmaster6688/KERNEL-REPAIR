@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the accompanying paper."
+title: "CoHiKer++: LLM-based fault localization and repair for the Linux kernel"
+abstract: >-
+  Reproducible artifact for contrastive-reasoning fault localization (BGE-M3
+  dense retrieval over a case-level semantic knowledge base plus a golden-patch
+  knowledge base) combined with a LangGraph multi-agent repair pipeline that
+  generates, applies and validates kernel patches in QEMU.
+authors:
+  - family-names: Pang
+    given-names: Yesong
+    email: 2101361572@qq.com
+version: 1.0.0
+date-released: "2026-11-25"
+license: MIT
+repository-code: "https://github.com/ctrlcvmaster6688/LLM-based-fault-localization-for-linux-kernel"
+keywords:
+  - fault localization
+  - linux kernel
+  - large language models
+  - automated program repair
+  - syzkaller

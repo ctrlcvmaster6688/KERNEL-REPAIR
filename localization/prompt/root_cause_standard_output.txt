@@ -1,0 +1,14 @@
+{
+  "hypotheses": [
+    {
+      "rank": 1,
+      "function_name": "example_function",
+      "hypothesis": "example_function computes the allocation size from an unvalidated user-supplied count and passes it to kvmalloc_node, so a huge count reaches the allocator and triggers the WARNING in mm/util.c."
+    },
+    {
+      "rank": 2,
+      "function_name": "another_example",
+      "hypothesis": "another_example drops the reference taken on the socket without holding the lock, so a concurrent release frees the object that the crash trace still dereferences."
+    }
+  ]
+}

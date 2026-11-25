@@ -1,0 +1,64 @@
+------------[ cut here ]------------
+kernel BUG at fs/jfs/inode.c:169!
+Oops: invalid opcode: 0000 [#1] SMP KASAN NOPTI
+CPU: 1 UID: 0 PID: 34843 Comm: syz.0.6955 Not tainted 6.16.0-g89748acdf226-dirty #2 PREEMPT(full) 
+Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.13.0-1ubuntu1.1 04/01/2014
+RIP: 0010:jfs_evict_inode+0x42c/0x430 fs/jfs/inode.c:169
+Code: 89 f7 e8 37 76 d7 fe e9 2f fe ff ff e8 1d 19 6b fe 48 c7 c7 60 3e f5 8e 4c 89 e6 e8 ee b5 f8 01 e9 96 fd ff ff e8 04 19 6b fe <0f> 0b 66 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 f3 0f
+RSP: 0018:ffffc90002547680 EFLAGS: 00010293
+RAX: ffffffff8355a93c RBX: ffff888042a43b80 RCX: ffff88806d702500
+RDX: 0000000000000000 RSI: 0000000000000000 RDI: ffff888042a43b80
+RBP: 0000000000000001 R08: ffffffff9032da37 R09: 1ffffffff2065b46
+R10: dffffc0000000000 R11: ffffffff835585b0 R12: dffffc0000000000
+R13: dffffc0000000000 R14: ffff888042a43808 R15: ffffffff8355a510
+FS:  0000000000000000(0000) GS:ffff8880ebb4e000(0000) knlGS:0000000000000000
+CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+CR2: 00007fb333f48000 CR3: 0000000061470000 CR4: 0000000000752ef0
+DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+DR3: 0000000000000000 DR6: 00000000ffff0ff0 DR7: 0000000000000600
+PKRU: 80000000
+Call Trace:
+ <TASK>
+ evict+0x526/0x9d0 fs/inode.c:810
+ dispose_list fs/inode.c:852 [inline]
+ evict_inodes+0x679/0x720 fs/inode.c:906
+ generic_shutdown_super+0x9a/0x2c0 fs/super.c:628
+ kill_block_super+0x44/0x90 fs/super.c:1766
+ deactivate_locked_super+0xc4/0x120 fs/super.c:474
+ cleanup_mnt+0x42e/0x4d0 fs/namespace.c:1378
+ task_work_run+0x258/0x320 kernel/task_work.c:227
+ exit_task_work include/linux/task_work.h:40 [inline]
+ do_exit+0x6e6/0x2410 kernel/exit.c:964
+ do_group_exit+0x216/0x2d0 kernel/exit.c:1105
+ get_signal+0x15bf/0x1660 kernel/signal.c:3034
+ arch_do_signal_or_restart+0x9e/0x820 arch/x86/kernel/signal.c:337
+ exit_to_user_mode_loop kernel/entry/common.c:40 [inline]
+ exit_to_user_mode_prepare include/linux/irq-entry-common.h:224 [inline]
+ irqentry_exit_to_user_mode+0x81/0x210 kernel/entry/common.c:73
+ exc_page_fault+0x662/0x8b0 arch/x86/mm/fault.c:1535
+ asm_exc_page_fault+0x26/0x30 arch/x86/include/asm/idtentry.h:623
+RIP: 0033:0x0
+Code: Unable to access opcode bytes at 0xffffffffffffffd6.
+RSP: 002b:00002000000000c8 EFLAGS: 00010217
+RAX: 0000000000000000 RBX: 00007f0bf23d5fa0 RCX: 00007f0bf21af50d
+RDX: 0000000000000000 RSI: 00002000000000c0 RDI: 0000000000404000
+RBP: 00007f0bf22350df R08: 0000000000000000 R09: 0000000000000000
+R10: 0000000000000000 R11: 0000000000000206 R12: 0000000000000000
+R13: 0000000000000000 R14: 00007f0bf23d5fa0 R15: 00007f0bf30dfd40
+ </TASK>
+Modules linked in:
+---[ end trace 0000000000000000 ]---
+RIP: 0010:jfs_evict_inode+0x42c/0x430 fs/jfs/inode.c:169
+Code: 89 f7 e8 37 76 d7 fe e9 2f fe ff ff e8 1d 19 6b fe 48 c7 c7 60 3e f5 8e 4c 89 e6 e8 ee b5 f8 01 e9 96 fd ff ff e8 04 19 6b fe <0f> 0b 66 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 f3 0f
+RSP: 0018:ffffc90002547680 EFLAGS: 00010293
+RAX: ffffffff8355a93c RBX: ffff888042a43b80 RCX: ffff88806d702500
+RDX: 0000000000000000 RSI: 0000000000000000 RDI: ffff888042a43b80
+RBP: 0000000000000001 R08: ffffffff9032da37 R09: 1ffffffff2065b46
+R10: dffffc0000000000 R11: ffffffff835585b0 R12: dffffc0000000000
+R13: dffffc0000000000 R14: ffff888042a43808 R15: ffffffff8355a510
+FS:  0000000000000000(0000) GS:ffff8880ebb4e000(0000) knlGS:0000000000000000
+CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+CR2: 00001ffffffff780 CR3: 0000000065a62000 CR4: 0000000000752ef0
+DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+DR3: 0000000000000000 DR6: 00000000ffff0ff0 DR7: 0000000000000600
+PKRU: 80000000

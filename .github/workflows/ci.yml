@@ -1,0 +1,47 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  offline-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      # The package must stay importable/compilable with the standard library
+      # only: no third-party import may happen at module import time.
+      - name: compile everything
+        run: python -m compileall -q .
+
+      - name: help screens work without the heavy dependencies
+        run: |
+          python localization/main.py --help > /dev/null
+          python tools/embed_server/flask_embedding.py --help > /dev/null
+
+      - name: pipeline dry run (preflight + command construction)
+        run: |
+          LLM_API_KEY=dummy bash run_pipeline.sh --syzid 60c52ca98513a8760a91 --dry-run > /tmp/dry.log 2>&1 || true
+          grep -E '(localization|repair|dry run)' /tmp/dry.log | head -20
+
+      - name: shell scripts are LF and syntactically valid
+        run: |
+          file run_pipeline.sh | grep -q CRLF && { echo "run_pipeline.sh has CRLF"; exit 1; } || true
+          bash -n run_pipeline.sh
+
+      - name: no internal addresses / secrets committed
+        run: |
+          ! grep -rnE '(172|10|192)\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' \
+              --include='*.py' --include='*.md' --include='*.sh' \
+              --include='*.example' --include='*.txt' . \
+            | grep -v 'data/datasets/bug_report/'
+          test ! -e .env
+
+      - name: knowledge bases are not tracked
+        run: |
+          ! git ls-files | grep -E '\.db$'

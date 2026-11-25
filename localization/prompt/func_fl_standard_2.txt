@@ -1,0 +1,54 @@
+{
+  "thought_process": {
+    "step_1": {
+      "description": "Bug Understanding",
+      "details": "..."
+    },
+    "step_2": {
+      "description": "Program Intention",
+      "details": "..."
+    },
+    "step_3": {
+      "description": "Successful Mutation Analysis",
+      "details": "..."
+    },
+    "step_4": {
+      "description": "Failed Mutation Analysis",
+      "details": "..."
+    },
+    "step_5": {
+      "description": "Defect Pattern and Lifecycle Inference",
+      "details": "..."
+    },
+    "step_6": {
+      "description": "Function Classification and Mapping",
+      "details": "..."
+    },
+    "step_7": {
+      "description": "Suspicion Inference",
+      "details": "..."
+    },
+    "step_8": {
+      "description": "Final Output",
+      "details": "..."
+    }
+  },
+  "ranked_results": [
+    {
+      "rank": 1,
+      "function": "function_name_1",
+      "file": "path/to/file.c",
+      "root_cause_hypothesis": "..."
+    },
+    {
+      "rank": 2,
+      "function": "function_name_2",
+      "file": "path/to/file.c",
+      "root_cause_hypothesis": "..."
+    }
+  ],
+  "standard_output": [
+    "function_name_1",
+    "function_name_2"
+  ]
+}

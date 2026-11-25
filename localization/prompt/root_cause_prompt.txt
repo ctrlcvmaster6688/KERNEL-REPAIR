@@ -1,0 +1,24 @@
+You are a Linux kernel bug analyst. A crash report and the Top-K most suspicious
+functions (ranked by a fault-localization pipeline) are given below.
+
+Your task: for every ranked function, write one concise root-cause hypothesis
+explaining how that function could be responsible for the crash.
+
+Rules:
+- Ground every hypothesis in the crash report (stack trace, BUG/WARN line,
+  subsystem) and in the file path / function name; do not invent kernel code.
+- One or two sentences per function; say what goes wrong (missing check, wrong
+  size, lifetime/refcount error, missing lock, race, ...) and why it explains
+  this crash.
+- Keep the given rank and function name exactly as they appear in the input.
+- Output valid JSON only, no prose, matching the schema of the provided example.
+
+Input:
+
+Case id: {CASE_ID}
+
+[Crash report]
+{BUG_REPORT_HERE}
+
+[Top-K suspicious functions]
+{FUNCTION_LIST_HERE}

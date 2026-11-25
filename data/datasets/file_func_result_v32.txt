@@ -1,0 +1,2515 @@
+Response for case 60c52ca98513a8760a91
+1. commit_creds:kernel/cred.c
+2. io_issue_sqe:fs/io_uring.c
+3. lookup_user_key:security/keys/process_keys.c
+4. __do_sys_add_key:security/keys/keyctl.c
+5. add_key:security/keys/keyctl.c
+6. install_process_keyring_to_cred:security/keys/process_keys.c
+7. prepare_creds:kernel/cred.c
+8. io_register_personality:fs/io_uring.c
+9. key_change_session_keyring:security/keys/process_keys.c
+10. set_cred_user_ns:kernel/user_namespace.c
+
+Response for case a168dbeaaa7778273c1b
+1. fbcon_do_set_font:drivers/video/fbdev/core/fbcon.c
+2. fbcon_release:drivers/video/fbdev/core/fbcon.c
+3. fbcon_fb_unregistered:drivers/video/fbdev/core/fbcon.c
+4. fbcon_set_font:drivers/video/fbdev/core/fbcon.c
+5. fbcon_fb_unbind:drivers/video/fbdev/core/fbcon.c
+6. fbcon_remap_all:drivers/video/fbdev/core/fbcon.c
+7. fbcon_modechanged:drivers/video/fbdev/core/fbcon.c
+8. con_font_set:drivers/tty/vt/vt.c
+9. con_font_op:drivers/tty/vt/vt_ioctl.c
+10. fbcon_deinit:drivers/video/fbdev/core/fbcon.c
+
+Response for case 9937dc42271cd87d4b98
+1. nbd_dev_add:drivers/block/nbd.c
+2. internal_create_group:fs/sysfs/group.c
+3. blk_register_queue:block/blk-sysfs.c
+4. __device_add_disk:block/genhd.c
+5. add_disk:block/genhd.c
+6. nbd_genl_connect:drivers/block/nbd.c
+7. create_files:fs/sysfs/group.c
+8. internal_create_groups:fs/sysfs/group.c
+9. blk_unregister_queue:block/blk-sysfs.c
+10. kobject_add_internal:lib/kobject.c
+
+Response for case 5d5821ad053bbbd4a11174989f2bf9d111873c52
+1. fou_build_udp:net/ipv4/fou_core.c
+2. ipip6_tunnel_bind_dev:net/ipv6/sit.c
+3. gue_build_header:net/ipv4/fou_core.c
+4. ip_tunnel_encap_setup:net/ipv4/ip_tunnel.c
+5. parse_nl_config:net/ipv4/fou_core.c
+6. ip_tunnel_encap:net/ipv4/ip_tunnel.c
+7. ip_tunnel_xmit:net/ipv4/ip_tunnel.c
+8. ip_tunnel_newlink:net/ipv4/ip_tunnel.c
+9. ip_tunnel_changelink:net/ipv4/ip_tunnel.c
+10. skb_push:net/core/skbuff.c
+
+Response for case 67654e51e54455f1c585
+1. remove_inode_hugepages:fs/hugetlbfs/inode.c
+2. hugetlbfs_evict_inode:fs/hugetlbfs/inode.c
+3. memfd_wait_for_pins:mm/memfd.c
+4. hugetlb_unreserve_pages:mm/hugetlb.c
+5. hugetlbfs_file_mmap:fs/hugetlbfs/inode.c
+6. memfd_create:mm/memfd.c
+7. hugetlb_reserve_pages:mm/hugetlb.c
+8. iput_final:fs/inode.c
+9. __dentry_kill:fs/dcache.c
+10. memfd_tag_pins:mm/memfd.c
+
+Response for case 1fa91bcd05206ff8cbb5
+1. kcm_attach:net/kcm/kcmsock.c
+2. kcm_unattach:net/kcm/kcmsock.c
+3. kcm_psock_destroy:include/net/kcm.h
+4. sk_psock_get:include/linux/skmsg.h
+5. kcm_attach_ioctl:net/kcm/kcmsock.c
+6. kcm_ioctl:net/kcm/kcmsock.c
+7. tls_sw_recvmsg:net/tls/tls_sw.c
+8. kcm_attach_ioctl:include/net/kcm.h
+9. kcm_ioctl:include/net/kcm.h
+10. kcm_psock:net/kcm/kcmsock.c
+
+Response for case 11421fbbff99b989670e
+1. kvmalloc_node:mm/util.c
+2. xdp_umem_pin_pages:net/xdp/xdp_umem.c
+3. xdp_umem_reg:net/xdp/xdp_umem.c
+4. xdp_umem_create:net/xdp/xdp_umem.c
+5. xsk_setsockopt:net/xdp/xsk.c
+6. kvmalloc_array:include/linux/slab.h
+7. kvcalloc:include/linux/slab.h
+8. xdp_umem_account_pages:net/xdp/xdp_umem.c
+9. xdp_reg_mem_model:net/core/xdp.c
+10. xsk_create:net/xdp/xsk.c
+
+Response for case 178efee9e2d7f87f5103
+1. nf_tables_exit_net:net/netfilter/nf_tables_api.c
+2. nft_set_destroy:net/netfilter/nf_tables_api.c
+3. nft_setelem_destroy:net/netfilter/nf_tables_api.c
+4. nft_obj_destroy:net/netfilter/nf_tables_api.c
+5. __nft_release_table:net/netfilter/nf_tables_api.c
+6. __nft_release_basechain:net/netfilter/nf_tables_api.c
+7. nft_limit_obj_select_ops:net/netfilter/nft_limit.c
+8. nft_rhash_destroy:net/netfilter/nft_set_hash.c
+9. nft_hash_destroy:net/netfilter/nft_set_hash.c
+10. nf_tables_expr_destroy:net/netfilter/nf_tables_api.c
+
+Response for case 6ada951e7c0f7bc8a71e
+1. hugetlb_vma_lock_alloc:mm/hugetlb.c
+2. hugetlb_vma_lock_write:mm/hugetlb.c
+3. __hugetlb_zap_begin:mm/hugetlb.c
+4. hugetlb_vm_op_open:mm/hugetlb.c
+5. hugetlb_vm_op_close:mm/hugetlb.c
+6. __hugetlb_vma_unlock_write_free:mm/hugetlb.c
+7. hugetlb_vma_unlock_write:mm/hugetlb.c
+8. __hugetlb_zap_end:mm/hugetlb.c
+9. __hugetlb_zap_begin:mm/memory.c
+10. hugetlb_zap_begin:kernel/exit.c
+
+Response for case a76f6a6e524cf2080aa3
+1. fscache_alloc_volume:fs/fscache/volume.c
+2. fscache_volume_same:fs/fscache/volume.c
+3. __fscache_acquire_volume:fs/fscache/volume.c
+4. fscache_create_volume:fs/fscache/volume.c
+5. fscache_hash_volume:fs/fscache/volume.c
+6. fscache_init_volume:fs/9p/cache.c
+7. fscache_get_volume:fs/9p/cache.c
+8. v9fs_cache_session_get_cookie:fs/9p/cache.c
+9. fscache_put_volume:fs/fscache/volume.c
+10. fscache_free_volume:fs/9p/cache.c
+
+Response for case 649e339fa6658ee623d3
+1. nft_ct_tmpl_put_pcpu:net/netfilter/nft_ct.c
+2. __nft_ct_set_destroy:net/netfilter/nft_ct.c
+3. nft_ct_set_init:net/netfilter/nft_ct.c
+4. nft_ct_tmpl_alloc_pcpu:net/netfilter/nft_ct.c
+5. nf_ct_tmpl_free:net/netfilter/nf_conntrack_core.c
+6. destroy_conntrack:net/netfilter/nf_conntrack_core.c
+7. nft_expr_init:net/netfilter/nft_ct.c
+8. nf_tables_newexpr:net/netfilter/nf_tables_api.c
+9. nf_tables_newset:net/netfilter/nf_tables_api.c
+10. nf_ct_put:include/net/netfilter/nf_conntrack.h
+
+Response for case 10e27961f4da37c443b2
+1. udmabuf_dev_init:drivers/dma-buf/udmabuf.c
+2. __dma_map_sg_attrs:kernel/dma/mapping.c
+3. get_sg_table:drivers/dma-buf/udmabuf.c
+4. dma_map_sgtable:kernel/dma/mapping.c
+5. udmabuf_create:drivers/dma-buf/udmabuf.c
+6. dma_buf_begin_cpu_access:drivers/dma-buf/dma-buf.c
+7. dma_buf_begin_cpu_access:drivers/dma-buf/udmabuf.c
+8. release_udmabuf:drivers/dma-buf/udmabuf.c
+9. shmem_getpage_gfp:mm/shmem.c
+10. dma_unmap_sg_attrs:kernel/dma/mapping.c
+
+Response for case 1a0a53300ce782f8b3ad
+1. io_msg_ring:fs/io_uring.c
+2. io_iopoll_try_reap_events:fs/io_uring.c
+3. __io_arm_poll_handler:fs/io_uring.c
+4. io_poll_check_events:fs/io_uring.c
+5. io_poll_wake:fs/io_uring.c
+6. io_poll_remove_all:fs/io_uring.c
+7. io_ring_ctx_wait_and_kill:fs/io_uring.c
+8. io_uring_release:fs/io_uring.c
+9. io_poll_req_insert:fs/io_uring.c
+10. remove_buffers:fs/io_uring.c
+
+Response for case 0b7c8bfd17c00d016fb4
+1. pty_write:drivers/tty/pty.c
+2. tty_buffer_alloc:drivers/tty/tty_buffer.c
+3. console_unlock:kernel/printk/printk.c
+4. __tty_buffer_request_room:drivers/tty/tty_buffer.c
+5. tty_insert_flip_string_fixed_flag:drivers/tty/tty_buffer.c
+6. tty_insert_flip_string:drivers/tty/pty.c
+7. should_fail:lib/fault-inject.c
+8. fail_dump:lib/fault-inject.c
+9. _printk:kernel/printk/printk.c
+10. vprintk:kernel/printk/printk.c
+
+Response for case 31d54c60c5b254d6f75b
+1. ath9k_htc_txstatus:drivers/net/wireless/ath/ath9k/htc_drv_txrx.c
+2. ath9k_wmi_event_tasklet:drivers/net/wireless/ath/ath9k/wmi.c
+3. ath9k_init_wmi:drivers/net/wireless/ath/ath9k/htc_drv_init.c
+4. ath9k_htc_init:drivers/net/wireless/ath/ath9k/htc_drv_init.c
+5. ath9k_htc_start:drivers/net/wireless/ath/ath9k/htc_drv_main.c
+6. ath9k_init_device:drivers/net/wireless/ath/ath9k/htc_drv_init.c
+7. ath9k_init_priv:drivers/net/wireless/ath/ath9k/htc_drv_init.c
+8. htc_drv_txrx:drivers/net/wireless/ath/ath9k/htc_drv_txrx.c
+9. ath9k_htc_tx:drivers/net/wireless/ath/ath9k/htc_drv_main.c
+10. ath9k_htc_tx_completion:drivers/net/wireless/ath/ath9k/htc_drv_txrx.c
+
+Response for case 050eeedd6c285d8c42f2
+1. crypto_cbc_create:crypto/cbc.c
+2. crypto_cbc_decrypt_segment:crypto/cbc.c
+3. crypto_arc4_crypt:crypto/arc4.c
+4. crypto_cbc_decrypt:crypto/cbc.c
+5. crypto_lskcipher_crypt_sg:crypto/lskcipher.c
+6. _skcipher_recvmsg:crypto/algif_skcipher.c
+7. skcipher_walk_virt:crypto/skcipher.c
+8. skcipher_recvmsg:crypto/algif_skcipher.c
+9. crypto_cbc_decrypt_inplace:crypto/cbc.c
+10. crypto_lskcipher_decrypt_sg:crypto/lskcipher.c
+
+Response for case 5b82f0e951f8c2bcdb8f
+1. btrfs_dio_submit_io:fs/btrfs/inode.c
+2. btrfs_dio_end_io:fs/btrfs/inode.c
+3. btrfs_finish_ordered_extent:fs/btrfs/ordered-data.c
+4. btrfs_start_ordered_extent:fs/btrfs/ordered-data.c
+5. alloc_ordered_extent:fs/btrfs/ordered-data.c
+6. btrfs_create_dio_extent:fs/btrfs/inode.c
+7. btrfs_remove_ordered_extent:fs/btrfs/ordered-data.c
+8. iomap_dio_submit_bio:fs/iomap/direct-io.c
+9. __iomap_dio_rw:fs/iomap/direct-io.c
+10. btrfs_dio_iomap_end:fs/btrfs/inode.c
+
+Response for case 8b2a08dfbd25fd933d75
+1. bpf_verifier_vlog:kernel/bpf/verifier.c
+2. __btf_verifier_log:kernel/bpf/btf.c
+3. __btf_verifier_log_type:kernel/bpf/btf.c
+4. btf_func_proto_check_meta:kernel/bpf/btf.c
+5. btf_check_meta:kernel/bpf/btf.c
+6. btf_check_all_metas:kernel/bpf/btf.c
+7. btf_parse_type_sec:kernel/bpf/btf.c
+8. btf_parse:kernel/bpf/btf.c
+9. btf_new_fd:kernel/bpf/btf.c
+10. bpf_btf_load:kernel/bpf/syscall.c
+
+Response for case 2b9b4f0895be09a6dec3
+1. change_pte_range:mm/mprotect.c
+2. make_pte_marker_entry:include/linux/swapops.h
+3. uffd_wp_range:mm/userfaultfd.c
+4. mwriteprotect_range:mm/userfaultfd.c
+5. userfaultfd_writeprotect:fs/userfaultfd.c
+6. change_protection:mm/mprotect.c
+7. change_protection_range:mm/mprotect.c
+8. userfaultfd_ioctl:fs/userfaultfd.c
+9. walk_pte_range:mm/pagewalk.c
+10. handle_pte_marker:mm/memory.c
+
+Response for case 91e171a9aa357b24b62b3ab188bc04996448c99b
+1. in6_dump_addrs:net/ipv6/addrconf.c
+2. inet6_dump_addr:net/ipv6/addrconf.c
+3. ipv6_add_addr:net/ipv6/addrconf.c
+4. ipv6_del_addr:net/ipv6/addrconf.c
+5. inet6_addr_add:net/ipv6/addrconf.c
+6. inet6_addr_del:net/ipv6/addrconf.c
+7. addrconf_dad_completed:net/ipv6/addrconf.c
+8. netlink_dump:net/netlink/af_netlink.c
+9. __netlink_dump_start:net/netlink/af_netlink.c
+10. inet6_ifa_notify:net/ipv6/addrconf.c
+
+Response for case 3493b1873fb3ea827986
+1. hash_ip_create:net/netfilter/ipset/ip_set_hash_gen.h
+2. hash_ip_create:net/netfilter/ipset/ip_set_core.c
+3. ip_set_create:net/netfilter/ipset/ip_set_core.c
+4. htable_size:net/netfilter/ipset/ip_set_hash_gen.h
+5. ip_set_get_extensions:net/netfilter/ipset/ip_set_core.c
+6. find_set_type:net/netfilter/ipset/ip_set_core.c
+7. __find_set_type_get:net/netfilter/ipset/ip_set_core.c
+8. nfnetlink_rcv_msg:net/netfilter/nfnetlink.c
+9. kvmalloc_node:mm/util.c
+10. mtype_add:net/netfilter/ipset/ip_set_hash_gen.h
+
+Response for case 958967f249155967d42a
+1. btf_type_id_size:kernel/bpf/btf.c
+2. map_check_btf:kernel/bpf/syscall.c
+3. __btf_resolve_size:kernel/bpf/btf.c
+4. btf_resolve_size:kernel/bpf/btf.c
+5. btf_struct_resolve:kernel/bpf/btf.c
+6. btf_array_resolve:kernel/bpf/btf.c
+7. btf_modifier_resolve:kernel/bpf/btf.c
+8. btf_ref_type_check_meta:kernel/bpf/btf.c
+9. btf_check_meta:kernel/bpf/btf.c
+10. map_create:kernel/bpf/syscall.c
+
+Response for case 6d31bf169a8265204b8d
+1. mceusb_dev_printdata:drivers/media/rc/mceusb.c
+2. mceusb_process_ir_data:drivers/media/rc/mceusb.c
+3. mceusb_dev_recv:drivers/media/rc/mceusb.c
+4. mceusb_handle_command:drivers/media/rc/mceusb.c
+5. mceusb_cmd_datasize:drivers/media/rc/mceusb.c
+6. mceusb_gen1_init:drivers/media/rc/mceusb.c
+7. mceusb_gen2_init:drivers/media/rc/mceusb.c
+8. mceusb_get_parameters:drivers/media/rc/mceusb.c
+9. mceusb_set_tx_carrier:drivers/media/rc/mceusb.c
+10. mceusb_init_rc_dev:drivers/media/rc/mceusb.c
+
+Response for case 02617ac69815ae324053c954118c2dc7ba0e59b2
+1. decrypt_internal:net/tls/tls_sw.c
+2. tls_set_sw_offload:net/tls/tls_sw.c
+3. tls_sw_recvmsg:net/tls/tls_sw.c
+4. decrypt_skb_update:net/tls/tls_sw.c
+5. tls_do_decryption:net/tls/tls_sw.c
+6. tls_get_rec:net/tls/tls_sw.c
+7. tls_sw_advance_skb:net/tls/tls_sw.c
+8. do_tls_setsockopt_conf:net/tls/tls_main.c
+9. tls_ctx_create:net/tls/tls_main.c
+10. process_rx_list:net/tls/tls_sw.c
+
+Response for case 35eebd505e97d315d01c
+1. thrustmaster_interrupts:drivers/hid/hid-thrustmaster.c
+2. thrustmaster_probe:drivers/hid/hid-thrustmaster.c
+3. hid_device_probe:drivers/hid/hid-core.c
+4. usbhid_probe:drivers/hid/usbhid/hid-core.c
+5. usb_probe_interface:drivers/usb/core/driver.c
+6. really_probe:drivers/base/dd.c
+7. usb_parse_interface:drivers/usb/core/config.c
+8. usb_get_configuration:drivers/usb/core/config.c
+9. hid_open_report:drivers/hid/hid-core.c
+10. usb_set_configuration:drivers/usb/core/message.c
+
+Response for case d2c5e6980bfc84513464
+1. null_skcipher_crypt:crypto/crypto_null.c
+2. crypto_authenc_encrypt:crypto/authenc.c
+3. esp6_output_head:net/ipv6/esp6.c
+4. crypto_authenc_create:crypto/authenc.c
+5. crypto_get_default_null_skcipher:crypto/crypto_null.c
+6. crypto_put_default_null_skcipher:crypto/crypto_null.c
+7. esp6_output:net/ipv6/esp6.c
+8. xfrm_output_resume:net/xfrm/xfrm_output.c
+9. crypto_aead_encrypt:crypto/aead.c
+10. crypto_skcipher_encrypt:crypto/skcipher.c
+
+Response for case 283ce5a46486d6acdbaf
+1. close_fd:fs/file.c
+2. vfs_fsconfig_locked:fs/fsopen.c
+3. __range_cloexec:fs/file.c
+4. put_fs_context:fs/fs_context.c
+5. fscontext_release:fs/fsopen.c
+6. __fput:fs/file.c
+7. task_work_run:kernel/task_work.c
+8. fput_many:kernel/task_work.c
+9. filp_close:fs/open.c
+10. alloc_empty_file:fs/open.c
+
+Response for case e68c89a9510c159d9684
+1. profile_init:kernel/profile.c
+2. profiling_store:kernel/ksysfs.c
+3. profile_setup:kernel/profile.c
+4. prof_cpu_mask_proc_write:kernel/profile.c
+5. profile_event_unregister:kernel/profile.c
+6. profile_flip_buffers:kernel/profile.c
+7. kobj_attr_store:lib/kobject.c
+8. sysfs_kf_write:fs/sysfs/file.c
+9. kernfs_fop_write_iter:fs/kernfs/file.c
+10. new_sync_write:fs/read_write.c
+
+Response for case 7ca4b2719dc742b8d0a4
+1. pagemap_scan_pmd_entry:fs/proc/task_mmu.c
+2. do_pagemap_scan:fs/proc/task_mmu.c
+3. pagemap_scan_test_walk:fs/proc/task_mmu.c
+4. zap_pte_range:mm/memory.c
+5. unmap_page_range:mm/memory.c
+6. pagemap_scan_pte_hole:fs/proc/task_mmu.c
+7. exit_mmap:mm/mmap.c
+8. __mmput:kernel/fork.c
+9. try_to_unmap:mm/rmap.c
+10. clear_refs_write:fs/proc/task_mmu.c
+
+Response for case 1665a0a4a1d6d4d3f61624353f8a9e5dbfff67bd
+1. inet_csk_get_port:net/ipv4/inet_connection_sock.c
+2. l2tp_tunnel_register:net/l2tp/l2tp_core.c
+3. inet_bhash2_addr_any_conflict:net/ipv4/inet_connection_sock.c
+4. sock_i_uid:net/core/sock.c
+5. __inet_bind:net/ipv4/af_inet.c
+6. smc_bind:net/smc/af_smc.c
+7. __inet_inherit_port:net/ipv4/inet_hashtables.c
+8. inet_bind:net/ipv4/af_inet.c
+9. tcp_v4_syn_recv_sock:net/ipv4/tcp_ipv4.c
+10. l2tp_nl_cmd_tunnel_create:net/l2tp/l2tp_netlink.c
+
+Response for case 011e4ea1da6692cf881c
+1. pipe_write:fs/pipe.c
+2. __pipe_lock:fs/pipe.c
+3. pipe_lock:fs/pipe.c
+4. splice_pipe_to_pipe:fs/splice.c
+5. pipe_lock_nested:fs/pipe.c
+6. iter_file_splice_write:fs/splice.c
+7. __do_splice:fs/splice.c
+8. iter_file_splice_write:fs/read_write.c
+9. pipe_unlock:fs/pipe.c
+10. __mutex_lock:kernel/locking/mutex.c
+
+Response for case a532b03fdfee2c137666
+1. _copy_from_iter:lib/iov_iter.c
+2. copy_page_from_iter:lib/iov_iter.c
+3. bio_copy_user_iov:block/blk-map.c
+4. blk_rq_map_user_iov:block/blk-map.c
+5. sg_common_write:drivers/scsi/sg.c
+6. iov_iter_extract_user_pages:lib/iov_iter.c
+7. iov_iter_extract_pages:lib/iov_iter.c
+8. sg_new_write:drivers/scsi/sg.c
+9. blk_rq_map_user_io:block/blk-map.c
+10. iov_iter_advance:lib/iov_iter.c
+
+Response for case 6879187cf57845801267
+1. io_file_get:fs/io_uring.c
+2. __io_splice_prep:fs/io_uring.c
+3. io_sqe_files_unregister:fs/io_uring.c
+4. io_uring_del_task_file:fs/io_uring.c
+5. io_file_put_work:fs/io_uring.c
+6. __io_file_put_work:fs/io_uring.c
+7. io_req_drop_files:fs/io_uring.c
+8. __io_sqe_files_unregister:fs/io_uring.c
+9. io_sqe_files_update:fs/io_uring.c
+10. io_queue_file_removal:fs/io_uring.c
+
+Response for case c558267ad910fc494497
+1. display_open:drivers/media/rc/imon.c
+2. imon_init_display:drivers/media/rc/imon.c
+3. usb_register_dev:drivers/usb/core/file.c
+4. usb_open:drivers/usb/core/file.c
+5. imon_probe:drivers/media/rc/imon.c
+6. imon_init_intf0:drivers/media/rc/imon.c
+7. usb_probe_interface:drivers/usb/core/driver.c
+8. really_probe:drivers/base/dd.c
+9. __device_attach:drivers/base/dd.c
+10. __mutex_lock:kernel/locking/mutex.c
+
+Response for case 60df062e1c41940cae0f
+1. component_del:drivers/base/component.c
+2. usb_hub_remove_port_device:drivers/usb/core/port.c
+3. remove_component:drivers/base/component.c
+4. connector_bind:drivers/usb/core/port.c
+5. unlink_peers:drivers/usb/core/port.c
+6. component_unbind:drivers/base/component.c
+7. hub_disconnect:drivers/usb/core/hub.c
+8. usb_driver_release_interface:drivers/usb/core/driver.c
+9. __device_release_driver:drivers/base/dd.c
+10. usb_unbind_interface:drivers/usb/core/driver.c
+
+Response for case 2ee18845e89ae76342c5
+1. mas_root:lib/maple_tree.c
+2. mas_start:lib/maple_tree.c
+3. mas_state_walk:lib/maple_tree.c
+4. mas_walk:lib/maple_tree.c
+5. unmerge_and_remove_all_rmap_items:mm/ksm.c
+6. vma_next:include/linux/mm.h
+7. mas_find:lib/maple_tree.c
+8. run_store:mm/ksm.c
+9. validate_child_slot:lib/maple_tree.c
+10. lockdep_rcu_suspicious:kernel/locking/lockdep.c
+
+Response for case 42d8c7c3d3e594b34346
+1. std_validate:drivers/media/v4l2-core/v4l2-ctrls.c
+2. validate_new:drivers/media/v4l2-core/v4l2-ctrls.c
+3. set_ctrl:drivers/media/v4l2-core/v4l2-ctrls.c
+4. v4l2_s_ctrl:drivers/media/v4l2-core/v4l2-ctrls.c
+5. v4l_s_ctrl:drivers/media/v4l2-core/v4l2-ioctl.c
+6. __video_do_ioctl:drivers/media/v4l2-core/v4l2-ioctl.c
+7. vim2m_VIDIOC_S_CTRL:drivers/media/v4l2-core/v4l2-ioctl.c
+8. v4l2_ctrl_fill:drivers/media/v4l2-core/v4l2-ctrls.c
+9. v4l2_ctrl_new:drivers/media/v4l2-core/v4l2-ctrls.c
+10. std_init:drivers/media/v4l2-core/v4l2-ctrls.c
+
+Response for case 6087eafb76a94c4ac9eb
+1. dbgfs_rm_context_write:mm/damon/dbgfs.c
+2. dbgfs_rm_context:mm/damon/dbgfs.c
+3. dbgfs_rm_context:mm/damon/core.c
+4. rm_contexts:mm/damon/core.c
+5. damon_destroy_targets:mm/damon/core.c
+6. damon_stop:mm/damon/core.c
+7. __damon_stop:mm/damon/core.c
+8. rm_contexts:mm/damon/dbgfs.c
+9. dbgfs_rm_context_write:fs/debugfs/inode.c
+10. damon_new_ctx:mm/damon/core.c
+
+Response for case 3faecbfd845a895c04cb
+1. find_target_block_classic:fs/erofs/namei.c
+2. erofs_bread:fs/erofs/data.c
+3. erofs_namei:fs/erofs/namei.c
+4. erofs_lookup:fs/erofs/namei.c
+5. z_erofs_do_read_page:fs/erofs/zdata.c
+6. z_erofs_read_fragment:fs/erofs/zdata.c
+7. erofs_map_blocks:fs/erofs/data.c
+8. erofs_map_blocks_flatmode:fs/erofs/data.c
+9. z_erofs_pcluster_readmore:fs/erofs/zdata.c
+10. z_erofs_do_map_blocks:fs/erofs/zmap.c
+
+Response for case 4d2d56175b934b9a7bf9
+1. ath9k_htc_rxep:drivers/net/wireless/ath/ath9k/htc_drv_txrx.c
+2. ath9k_hif_usb_reg_in_cb:drivers/net/wireless/ath/ath9k/hif_usb.c
+3. ath9k_htc_rx_msg:drivers/net/wireless/ath/ath9k/htc_hst.c
+4. ath9k_hif_usb_alloc_reg_in_urbs:drivers/net/wireless/ath/ath9k/hif_usb.c
+5. ath9k_hif_usb_alloc_rx_urbs:drivers/net/wireless/ath/ath9k/hif_usb.c
+6. ath9k_hif_usb_probe:drivers/net/wireless/ath/ath9k/hif_usb.c
+7. htc_connect_service:drivers/net/wireless/ath/ath9k/htc_hst.c
+8. ath9k_hif_usb_disconnect:drivers/net/wireless/ath/ath9k/hif_usb.c
+9. hif_usb_stop:drivers/net/wireless/ath/ath9k/hif_usb.c
+10. reg_in_cb:drivers/net/wireless/ath/ath9k/hif_usb.c
+
+Response for case 2b50dd7e9d79da3a1949141a7f38c2af0d01ddf3
+1. sk_destruct:net/core/sock.c
+2. skb_splice_bits:fs/splice.c
+3. skb_splice_bits:net/core/skbuff.c
+4. tcp_splice_read:net/ipv4/tcp.c
+5. __sk_free:net/core/sock.c
+6. tcp_close:net/ipv4/tcp.c
+7. sk_free:net/core/sock.c
+8. free_pipe_info:fs/pipe.c
+9. splice_to_pipe:fs/splice.c
+10. inet6_release:net/ipv6/af_inet6.c
+
+Response for case 6b74cf8fcd7378d8be7c
+1. inode_io_list_del:fs/fs-writeback.c
+2. fat_evict_inode:fs/fat/inode.c
+3. evict:fs/inode.c
+4. __writeback_single_inode:fs/fs-writeback.c
+5. writeback_single_inode:fs/fs-writeback.c
+6. iput_final:fs/inode.c
+7. fat_detach:fs/fat/inode.c
+8. dentry_unlink_inode:fs/dcache.c
+9. __dentry_kill:fs/dcache.c
+10. fat_write_inode:fs/fat/inode.c
+
+Response for case 5f26f85569bd179c18ce
+1. tls_data_ready:net/tls/tls_sw.c
+2. sk_psock_get:net/tls/tls_main.c
+3. sk_psock_get:net/tls/tls_sw.c
+4. tls_sk_proto_close:net/tls/tls_main.c
+5. tls_sw_release_resources_rx:net/tls/tls_sw.c
+6. tls_sw_release_resources_tx:net/tls/tls_sw.c
+7. tls_ctx_create:net/tls/tls_main.c
+8. tls_init:net/tls/tls_main.c
+9. sk_psock_get:include/linux/skmsg.h
+10. sk_psock_get:net/core/sock.c
+
+Response for case c203af981f0f7cc27debda75f35d852546cc6013
+1. ip6erspan_tunnel_xmit:net/ipv6/ip6_gre.c
+2. ip6erspan_newlink:net/ipv6/ip6_gre.c
+3. ip6gre_newlink_common:net/ipv6/ip6_gre.c
+4. prepare_ip6gre_xmit_other:net/ipv6/ip6_gre.c
+5. __gre6_xmit:net/ipv6/ip6_gre.c
+6. ip6gre_tunnel_init_common:net/ipv6/ip6_gre.c
+7. ip6erspan_set_version:net/ipv6/ip6_gre.c
+8. ip6gre_tunnel_locate:net/ipv6/ip6_gre.c
+9. packet_snd:net/packet/af_packet.c
+10. packet_direct_xmit:net/packet/af_packet.c
+
+Response for case c94a3675a626f6333d74
+1. cma_listen_on_all:drivers/infiniband/core/cma.c
+2. _destroy_id:drivers/infiniband/core/cma.c
+3. ucma_destroy_private_ctx:drivers/infiniband/core/ucma.c
+4. rdma_listen:drivers/infiniband/core/cma.c
+5. ucma_close_id:drivers/infiniband/core/ucma.c
+6. cma_cancel_operation:drivers/infiniband/core/cma.c
+7. _cma_cancel_listens:drivers/infiniband/core/cma.c
+8. cma_work_handler:drivers/infiniband/core/cma.c
+9. cma_release_dev:drivers/infiniband/core/cma.c
+10. ucma_listen:drivers/infiniband/core/ucma.c
+
+Response for case 793a590957d9c1b96620
+1. __nf_ct_resolve_clash:net/netfilter/nf_conntrack_core.c
+2. nf_conntrack_confirm:net/netfilter/nf_conntrack_core.c
+3. __nf_conntrack_confirm:net/netfilter/nf_conntrack_core.c
+4. nf_ct_destroy:net/netfilter/nf_conntrack_core.c
+5. nf_conntrack_free:net/netfilter/nf_conntrack_core.c
+6. nf_confirm:net/netfilter/nf_conntrack_proto.c
+7. nf_ct_put:net/netfilter/nf_conntrack_core.c
+8. __nf_ct_ext_exist:net/netfilter/nf_conntrack_core.c
+9. nf_ct_ext_exist:net/netfilter/nf_conntrack_core.c
+10. nf_ct_ecache_exist:net/netfilter/nf_conntrack_core.c
+
+Response for case 92beb3d46aab498710fa
+1. bond_option_active_slave_get_rcu:include/net/bonding.h
+2. bond_ethtool_get_ts_info:drivers/net/bonding/bond_main.c
+3. __ethtool_get_ts_info:net/ethtool/common.c
+4. ethtool_get_phc_vclocks:net/ethtool/common.c
+5. sock_timestamping_bind_phc:net/core/sock.c
+6. bond_select_active_slave:drivers/net/bonding/bond_main.c
+7. bond_update_slave_arr:drivers/net/bonding/bond_main.c
+8. bond_get_lowest_level_rcu:drivers/net/bonding/bond_main.c
+9. sock_set_timestamping:net/core/sock.c
+10. sock_setsockopt:net/core/sock.c
+
+Response for case afd2d80e495f96049571
+1. nfnetlink_unbind:net/netfilter/nfnetlink.c
+2. netlink_setsockopt:net/netlink/af_netlink.c
+3. nfnetlink_bind:net/netfilter/nfnetlink.c
+4. netlink_NETLINK_DROP_MEMBERSHIP:net/netlink/af_netlink.c
+5. netlink_update_subscriptions:net/netlink/af_netlink.c
+6. netlink_update_listeners:net/netlink/af_netlink.c
+7. netlink_NETLINK_DROP_MEMBERSHIP:net/netfilter/nfnetlink.c
+8. netlink_update_socket_mc:net/netlink/af_netlink.c
+9. nfnetlink_subsys_register:net/netfilter/nfnetlink.c
+10. netlink_release:net/netlink/af_netlink.c
+
+Response for case 63dec323ac56c28e644f
+1. sg_common_write:drivers/scsi/sg.c
+2. sg_start_req:drivers/scsi/sg.c
+3. blk_rq_map_user_iov:block/blk-map.c
+4. bio_copy_user_iov:block/blk-map.c
+5. _copy_from_iter:lib/iov_iter.c
+6. sg_new_write:drivers/scsi/sg.c
+7. sg_write:drivers/scsi/sg.c
+8. blk_rq_map_user_io:block/blk-map.c
+9. copy_page_from_iter:lib/iov_iter.c
+10. do_iter_write:fs/read_write.c
+
+Response for case ea8d2792959aee015d8eb96d362df0c7a0d5130e
+1. __skb_flow_dissect:net/core/flow_dissector.c
+2. skb_get_poff:net/core/flow_dissector.c
+3. ____bpf_skb_get_pay_offset:net/core/filter.c
+4. bpf_skb_get_pay_offset:net/core/filter.c
+5. skb_flow_dissect_flow_keys_basic:include/linux/skbuff.h
+6. ppp_async_input:drivers/net/ppp/ppp_async.c
+7. process_input_packet:drivers/net/ppp/ppp_async.c
+8. ppp_receive_frame:drivers/net/ppp/ppp_generic.c
+9. __skb_flow_dissect:drivers/net/ppp/ppp_async.c
+10. __skb_header_pointer:include/linux/skbuff.h
+
+Response for case ec3b3128c576e109171d
+1. mceusb_handle_command:drivers/media/rc/mceusb.c
+2. mceusb_process_ir_data:drivers/media/rc/mceusb.c
+3. mceusb_dev_recv:drivers/media/rc/mceusb.c
+4. mceusb_cmd_datasize:drivers/media/rc/mceusb.c
+5. mceusb_deferred_kevent:drivers/media/rc/mceusb.c
+6. mceusb_gen1_init:drivers/media/rc/mceusb.c
+7. mceusb_gen2_init:drivers/media/rc/mceusb.c
+8. mceusb_dev_probe:drivers/media/rc/mceusb.c
+9. mceusb_set_tx_carrier:drivers/media/rc/mceusb.c
+10. mceusb_set_rx_wideband:drivers/media/rc/mceusb.c
+
+Response for case 97ea55669d5b2e909c5a6b7be2f9f8991499dbbd
+1. arp_req_get:net/ipv4/arp.c
+2. arp_ioctl:net/ipv4/arp.c
+3. sock_inet_SIOCGARP:net/ipv4/arp.c
+4. arp_ha:net/ipv4/arp.c
+5. sa_data:net/ipv4/arp.c
+6. arp_req_set:net/ipv4/arp.c
+7. arp_req_delete_public:net/ipv4/arp.c
+8. arp_req_set_public:net/ipv4/arp.c
+9. inet_ioctl:net/ipv4/af_inet.c
+10. sock_ioctl:fs/ioctl.c
+
+Response for case c70d87ac1d001f29a058
+1. post_one_notification:kernel/watch_queue.c
+2. key_create_or_update:security/keys/key.c
+3. __post_watch_notification:kernel/watch_queue.c
+4. __key_update:security/keys/key.c
+5. notify_key:security/keys/internal.h
+6. key_create_or_update:security/keys/keyctl.c
+7. add_key:security/keys/key.c
+8. fscrypt_ioctl_add_key:fs/crypto/keyring.c
+9. watch_queue_set_size:kernel/watch_queue.c
+10. keyctl_watch_key:security/keys/keyctl.c
+
+Response for case fadc0aaf497e6a493b9f
+1. md_open:drivers/md/md.c
+2. bd_register_pending_holders:block/holder.c
+3. device_add_disk:block/genhd.c
+4. md_alloc:drivers/md/md.c
+5. blkdev_get_by_dev:block/bdev.c
+6. md_probe:drivers/md/md.c
+7. add_disk:drivers/md/md.c
+8. blkdev_get_whole:block/bdev.c
+9. swsusp_check:kernel/power/swap.c
+10. software_resume:kernel/power/hibernate.c
+
+Response for case 2af3bc9585be7f23f290
+1. bfs_move_block:fs/bfs/file.c
+2. bfs_move_blocks:fs/bfs/file.c
+3. bfs_get_block:fs/bfs/file.c
+4. bfs_write_begin:fs/bfs/file.c
+5. create_empty_buffers:fs/buffer.c
+6. init_page_buffers:fs/buffer.c
+7. alloc_page_buffers:fs/buffer.c
+8. mark_buffer_dirty:fs/buffer.c
+9. __block_write_begin_int:fs/buffer.c
+10. bfs_fill_super:fs/bfs/inode.c
+
+Response for case 4903218f7fba0a2d6226
+1. nfnetlink_unbind:net/netfilter/nfnetlink.c
+2. netlink_release:net/netfilter/nfnetlink.c
+3. netlink_release:net/netlink/af_netlink.c
+4. netlink_update_listeners:net/netlink/af_netlink.c
+5. __netlink_change_ngroups:net/netlink/af_netlink.c
+6. nfnetlink_bind:net/netfilter/nfnetlink.c
+7. netlink_bind:net/netlink/af_netlink.c
+8. nfnetlink_subsys_register:net/netfilter/nfnetlink.c
+9. nfnetlink_init:net/netfilter/nfnetlink.c
+10. netlink_remove:net/netlink/af_netlink.c
+
+Response for case f31428628ef672716ea8
+1. qrtr_port_assign:net/qrtr/ns.c
+2. __qrtr_bind:net/qrtr/ns.c
+3. qrtr_bind:net/qrtr/qrtr.c
+4. ctrl_cmd_new_server:net/qrtr/ns.c
+5. ctrl_cmd_del_server:net/qrtr/ns.c
+6. qrtr_create:net/qrtr/qrtr.c
+7. qrtr_endpoint_register:net/qrtr/qrtr.c
+8. idr_alloc:lib/idr.c
+9. __sys_bind:net/socket.c
+10. qrtr_port_remove:net/qrtr/qrtr.c
+
+Response for case e94c5aaf7890901ebf9b
+1. pagemap_scan_pmd_entry:fs/proc/task_mmu.c
+2. pte_uffd_wp:arch/x86/include/asm/pgtable.h
+3. do_pagemap_scan:fs/proc/task_mmu.c
+4. pagemap_scan_test_walk:fs/proc/task_mmu.c
+5. uffd_wp_range:mm/userfaultfd.c
+6. handle_pte_marker:mm/memory.c
+7. pte_uffd_wp:mm/userfaultfd.c
+8. walk_pmd_range:mm/pagewalk.c
+9. pagemap_scan_hugetlb_entry:fs/proc/task_mmu.c
+10. try_to_unmap_one:mm/rmap.c
+
+Response for case 62120febbd1ee3c3c860
+1. ext4_xattr_inode_create:fs/ext4/xattr.c
+2. ext4_xattr_set_entry:fs/ext4/xattr.c
+3. ext4_xattr_get:fs/ext4/xattr.c
+4. ext4_xattr_inode_lookup_create:fs/ext4/xattr.c
+5. ext4_xattr_set_handle:fs/ext4/xattr.c
+6. ext4_xattr_set:fs/ext4/xattr.c
+7. ext4_xattr_ibody_set:fs/ext4/xattr.c
+8. ea_inode:fs/ext4/xattr.c
+9. __vfs_setxattr_locked:fs/xattr.c
+10. vfs_setxattr:fs/xattr.c
+
+Response for case e3563f0c94e188366dbb
+1. gsmld_receive_buf:drivers/tty/n_gsm.c
+2. gsmld_close:drivers/tty/n_gsm.c
+3. tty_set_ldisc:drivers/tty/tty_ldisc.c
+4. tty_ldisc_receive_buf:drivers/tty/tty_ldisc.c
+5. gsm_alloc_mux:drivers/tty/n_gsm.c
+6. tty_ioctl:drivers/tty/tty_io.c
+7. tty_ldisc_close:drivers/tty/tty_ldisc.c
+8. gsm_free_mux:drivers/tty/n_gsm.c
+9. gsmld_open:drivers/tty/n_gsm.c
+10. tty_ldisc_release:drivers/tty/tty_ldisc.c
+
+Response for case 12e098239d20385264d3
+1. write_buf:fs/btrfs/send.c
+2. send_header:fs/btrfs/send.c
+3. send_subvol:fs/btrfs/send.c
+4. btrfs_ioctl_send:fs/btrfs/send.c
+5. _btrfs_ioctl_send:fs/btrfs/ioctl.c
+6. __kernel_write_iter:fs/read_write.c
+7. kernel_write:fs/read_write.c
+8. __kernel_write:fs/read_write.c
+9. put_file_data:fs/btrfs/send.c
+10. send_write:fs/btrfs/send.c
+
+Response for case cbff7a52b6f99059e67f
+1. nilfs_check_page:fs/nilfs2/dir.c
+2. nilfs_delete_entry:fs/nilfs2/dir.c
+3. nilfs_dat_commit_end:fs/nilfs2/dat.c
+4. nilfs_direct_propagate:fs/nilfs2/direct.c
+5. nilfs_segctor_scan_file:fs/nilfs2/segment.c
+6. nilfs_collect_file_data:fs/nilfs2/segment.c
+7. nilfs_bmap_propagate:fs/nilfs2/bmap.c
+8. nilfs_evict_inode:fs/nilfs2/inode.c
+9. nilfs_dat_commit_update:fs/nilfs2/dat.c
+10. nilfs_segctor_apply_buffers:fs/nilfs2/segment.c
+
+Response for case cd43695a64bcd21b8596
+1. nf_tables_newset:net/netfilter/nf_tables_api.c
+2. nf_tables_set_desc_parse:net/netfilter/nf_tables_api.c
+3. nft_set_desc_concat_parse:net/netfilter/nf_tables_api.c
+4. nft_set_elem_expr_setup:net/netfilter/nf_tables_api.c
+5. nft_add_set_elem:net/netfilter/nf_tables_api.c
+6. nf_tables_newexpr:net/netfilter/nf_tables_api.c
+7. nft_set_elem_expr_alloc:net/netfilter/nf_tables_api.c
+8. nft_set_elem_init:net/netfilter/nf_tables_api.c
+9. nf_tables_newsetelem:net/netfilter/nf_tables_api.c
+10. nf_tables_expr_parse:net/netfilter/nf_tables_api.c
+
+Response for case 92340f7b2b4789907fdb
+1. input_dev_uevent:drivers/input/input.c
+2. add_uevent_var:lib/kobject_uevent.c
+3. hidinput_connect:drivers/hid/hid-input.c
+4. input_register_device:drivers/input/input.c
+5. device_add:drivers/base/core.c
+6. kobject_uevent_env:lib/kobject_uevent.c
+7. init_uevent_argv:lib/kobject_uevent.c
+8. ms_probe:drivers/hid/hid-microsoft.c
+9. hid_connect:drivers/hid/hid-core.c
+10. input_add_uevent_modalias_var:drivers/input/input.c
+
+Response for case a3fcd59df1b372066f5a
+1. io_sqe_buffer_register:fs/io_uring.c
+2. follow_hugetlb_page:mm/hugetlb.c
+3. try_grab_compound_head:mm/gup.c
+4. pin_user_pages:mm/gup.c
+5. __gup_longterm_locked:mm/gup.c
+6. io_sqe_buffers_register:fs/io_uring.c
+7. __get_user_pages:mm/gup.c
+8. is_pinnable_page:mm/gup.c
+9. page_zonenum:mm/page_alloc.c
+10. try_grab_page:mm/gup.c
+
+Response for case d451401ffd00a60677ee
+1. nl80211_req_set_reg:net/wireless/nl80211.c
+2. __reg_process_hint_user:net/wireless/reg.c
+3. regulatory_hint_user:net/wireless/reg.c
+4. set_regdom:net/wireless/reg.c
+5. is_user_regdom_saved:net/wireless/reg.c
+6. restore_regulatory_settings:net/wireless/reg.c
+7. restore_alpha2:net/wireless/reg.c
+8. reg_process_hint_user:net/wireless/reg.c
+9. nl80211_set_reg:net/wireless/nl80211.c
+10. regulatory_hint:net/wireless/reg.c
+
+Response for case 68223fe9f6c95ad43bed
+1. ext4_orphan_cleanup:fs/ext4/orphan.c
+2. mb_find_extent:fs/ext4/mballoc.c
+3. ext4_process_orphan:fs/ext4/super.c
+4. __dquot_initialize:fs/quota/dquot.c
+5. ext4_mb_complex_scan_group:fs/ext4/mballoc.c
+6. ext4_mb_regular_allocator:fs/ext4/mballoc.c
+7. ext4_mb_new_blocks:fs/ext4/mballoc.c
+8. get_free_dqblk:fs/quota/quota_tree.c
+9. ext4_quota_write:fs/ext4/super.c
+10. dquot_acquire:fs/quota/dquot.c
+
+Response for case 3dea30b047f41084de66
+1. vhci_hub_control:drivers/usb/usbip/vhci_hcd.c
+2. rh_call_control:drivers/usb/core/hcd.c
+3. do_proc_control:drivers/usb/core/devio.c
+4. usb_control_msg:drivers/usb/core/message.c
+5. vhci_hcd:drivers/usb/usbip/vhci_hcd.c
+6. vhci_hub_status:drivers/usb/usbip/vhci_hcd.c
+7. rh_urb_enqueue:drivers/usb/core/hcd.c
+8. usb_internal_control_msg:drivers/usb/core/message.c
+9. vhci_start:drivers/usb/usbip/vhci_hcd.c
+10. proc_control:drivers/usb/core/devio.c
+
+Response for case 7e9494b8b399902e994e
+1. xfs_refcountbt_init_cursor:fs/xfs/libxfs/xfs_refcount_btree.c
+2. xfs_refcount_recover_cow_leftovers:fs/xfs/libxfs/xfs_refcount.c
+3. xfs_btree_lookup_get_block:fs/xfs/libxfs/xfs_btree.c
+4. xfs_btree_lookup:fs/xfs/libxfs/xfs_btree.c
+5. xfs_btree_query_range:fs/xfs/libxfs/xfs_btree.c
+6. xfs_btree_simple_query_range:fs/xfs/libxfs/xfs_btree.c
+7. xfs_reflink_recover_cow:fs/xfs/xfs_reflink.c
+8. xlog_recover_finish:fs/xfs/xfs_log_recover.c
+9. xfs_btree_get_block:fs/xfs/libxfs/xfs_btree.c
+10. xfs_btree_read_buf_block:fs/xfs/libxfs/xfs_btree.c
+
+Response for case b308f5fd049fbbc6e74f
+1. vt_resizex:drivers/tty/vt/vt_ioctl.c
+2. vc_do_resize:drivers/tty/vt/vt.c
+3. fbcon_do_set_font:drivers/video/fbdev/core/fbcon.c
+4. fbcon_startup:drivers/video/fbdev/core/fbcon.c
+5. fbcon_putcs:drivers/video/fbdev/core/fbcon.c
+6. bit_putcs:drivers/video/fbdev/core/bitblit.c
+7. do_con_write:drivers/tty/vt/vt.c
+8. con_flush:drivers/tty/vt/vt.c
+9. fbcon_redraw:drivers/video/fbdev/core/fbcon.c
+10. fbcon_bmove:drivers/video/fbdev/core/fbcon.c
+
+Response for case 5925509f78293baa7331
+1. dummy_hub_control:drivers/usb/gadget/udc/dummy_hcd.c
+2. rh_call_control:drivers/usb/gadget/udc/dummy_hcd.c
+3. handle_control_request:drivers/usb/gadget/udc/dummy_hcd.c
+4. dummy_urb_enqueue:drivers/usb/gadget/udc/dummy_hcd.c
+5. dummy_queue:drivers/usb/gadget/udc/dummy_hcd.c
+6. rh_call_control:drivers/usb/core/hcd.c
+7. rh_urb_enqueue:drivers/usb/core/hcd.c
+8. usb_hcd_submit_urb:drivers/usb/core/hcd.c
+9. usb_submit_urb:drivers/usb/core/message.c
+10. do_proc_control:drivers/usb/core/devio.c
+
+Response for case 9b658439133becd38da1
+1. nbd_dev_add:drivers/block/nbd.c
+2. nbd_genl_connect:drivers/block/nbd.c
+3. nbd_alloc_config:drivers/block/nbd.c
+4. device_add_disk:block/genhd.c
+5. add_disk:block/genhd.c
+6. nbd_start_device:drivers/block/nbd.c
+7. __alloc_disk_node:block/genhd.c
+8. __blk_alloc_disk:block/genhd.c
+9. blk_alloc_queue:block/blk-core.c
+10. __blk_mq_alloc_disk:block/blk-mq.c
+
+Response for case 348331f63b034f89b622
+1. usb_submit_urb:drivers/usb/core/urb.c
+2. bcm5974_start_traffic:drivers/input/mouse/bcm5974.c
+3. bcm5974_open:drivers/input/mouse/bcm5974.c
+4. usb_parse_endpoint:drivers/usb/core/config.c
+5. usb_pipe_type_check:drivers/usb/core/urb.c
+6. usb_parse_interface:drivers/usb/core/config.c
+7. bcm5974_get_config:drivers/input/mouse/bcm5974.c
+8. usb_parse_configuration:drivers/usb/core/config.c
+9. usbhid_open:drivers/hid/usbhid/hid-core.c
+10. usb_control_msg:drivers/usb/core/message.c
+
+Response for case 1f4ba1e5520762c523c6
+1. io_file_data_ref_zero:fs/io_uring.c
+2. io_sqe_files_register:fs/io_uring.c
+3. __io_uring_register:fs/io_uring.c
+4. io_sqe_files_unregister:fs/io_uring.c
+5. __io_file_put_work:fs/io_uring.c
+6. io_ring_ctx_free:fs/io_uring.c
+7. percpu_ref_put_many:include/linux/percpu-refcount.h
+8. rcu_core:kernel/rcu/tree.c
+9. spin_lock_bh:include/linux/spinlock.h
+10. io_queue_file_removal:fs/io_uring.c
+
+Response for case dcf33a7aae997956fe06
+1. gfs2_read_sb:fs/gfs2/ops_fstype.c
+2. init_sb:fs/gfs2/ops_fstype.c
+3. gfs2_fill_super:fs/gfs2/ops_fstype.c
+4. gfs2_check_sb:fs/gfs2/ops_fstype.c
+5. gfs2_sb_in:fs/gfs2/ops_fstype.c
+6. gfs2_read_sb:fs/gfs2/meta_io.c
+7. gfs2_fill_super:fs/gfs2/super.c
+8. gfs2_get_tree:fs/gfs2/ops_fstype.c
+9. get_tree_bdev:fs/super.c
+10. init_per_node:fs/gfs2/ops_fstype.c
+
+Response for case 0d5b462a6f07447991b3
+1. nilfs_set_page_dirty:fs/nilfs2/inode.c
+2. inode_to_wb:fs/nilfs2/inode.c
+3. nilfs_segctor_apply_buffers:fs/nilfs2/page.c
+4. nilfs_collect_dat_data:fs/nilfs2/segment.c
+5. nilfs_segctor_scan_file:fs/nilfs2/segment.c
+6. nilfs_dirty_inode:fs/nilfs2/inode.c
+7. nilfs_segctor_do_construct:fs/nilfs2/segment.c
+8. nilfs_btree_propagate:fs/nilfs2/btree.c
+9. nilfs_bmap_propagate:fs/nilfs2/bmap.c
+10. nilfs_evict_inode:fs/nilfs2/inode.c
+
+Response for case a84b8783366ecb1c65d0
+1. io_issue_sqe:fs/io_uring.c
+2. io_queue_sqe:fs/io_uring.c
+3. io_submit_sqe:fs/io_uring.c
+4. __io_queue_sqe:fs/io_uring.c
+5. io_ring_ctx_free:fs/io_uring.c
+6. io_sqe_buffers_register:fs/io_uring.c
+7. io_register_rsrc:fs/io_uring.c
+8. io_uring_create:fs/io_uring.c
+9. io_init_req:fs/io_uring.c
+10. io_ring_ctx_alloc:fs/io_uring.c
+
+Response for case e2787430e752a92b8750
+1. hfsplus_cat_read_inode:fs/hfsplus/inode.c
+2. hfsplus_iget:fs/hfsplus/super.c
+3. hfsplus_fill_super:fs/hfsplus/super.c
+4. hfsplus_cat_read_inode:fs/hfsplus/catalog.c
+5. hfsplus_cat_read_inode:fs/hfsplus/btree.c
+6. hfsplus_cat_read_inode:fs/hfsplus/bnode.c
+7. hfs_btree_open:fs/hfsplus/btree.c
+8. hfs_bnode_read:fs/hfsplus/bnode.c
+9. hfsplus_system_read_inode:fs/hfsplus/super.c
+10. mount_bdev:fs/super.c
+
+Response for case a7e701c8385bd8543074
+1. xfrm_xlate64_attr:net/xfrm/xfrm_compat.c
+2. xfrm_xlate64:net/xfrm/xfrm_compat.c
+3. xfrm_alloc_compat:net/xfrm/xfrm_compat.c
+4. xfrm_alloc_userspi:net/xfrm/xfrm_user.c
+5. xfrm_user_rcv_msg:net/xfrm/xfrm_user.c
+6. xfrm_user_rcv_msg_compat:net/xfrm/xfrm_compat.c
+7. xfrm_xlate32_attr:net/xfrm/xfrm_compat.c
+8. xfrm_xlate32:net/xfrm/xfrm_compat.c
+9. xfrm_compat:net/xfrm/xfrm_compat.c
+10. nla_type:net/xfrm/xfrm_compat.c
+
+Response for case deb631beeb93bdb2df4c
+1. ntfs_sparse_cluster:fs/ntfs3/file.c
+2. ntfs_fallocate:fs/ntfs3/file.c
+3. run_lookup:fs/ntfs3/run.c
+4. ntfs_extend:fs/ntfs3/file.c
+5. run_insert_range:fs/ntfs3/run.c
+6. ntfs_truncate:fs/ntfs3/file.c
+7. wnd_find:fs/ntfs3/bitmap.c
+8. ntfs_set_size:fs/ntfs3/inode.c
+9. run_truncate:fs/ntfs3/run.c
+10. ntfs_read_mft:fs/ntfs3/inode.c
+
+Response for case 28207acc70bbf3d85b74
+1. mi_enum_attr:fs/ntfs3/record.c
+2. ni_enum_attr_ex:fs/ntfs3/frecord.c
+3. ntfs_read_mft:fs/ntfs3/inode.c
+4. ntfs_iget5:fs/ntfs3/inode.c
+5. mi_read:fs/ntfs3/record.c
+6. ntfs_fill_super:fs/ntfs3/super.c
+7. ni_clear:fs/ntfs3/frecord.c
+8. ni_delete_all:fs/ntfs3/frecord.c
+9. mi_remove_attr:fs/ntfs3/record.c
+10. ntfs_read_mft:fs/ntfs3/record.c
+
+Response for case 28a246747e0a465127f3
+1. atusb_alloc_urbs:drivers/net/ieee802154/atusb.c
+2. atusb_disconnect:drivers/net/ieee802154/atusb.c
+3. atusb_probe:drivers/net/ieee802154/atusb.c
+4. usb_free_urb:drivers/usb/core/urb.c
+5. usb_kill_anchored_urbs:drivers/usb/core/urb.c
+6. usb_scuttle_anchored_urbs:drivers/usb/core/urb.c
+7. usb_unlink_urb:drivers/usb/core/urb.c
+8. usb_kill_urb:drivers/usb/core/urb.c
+9. usb_unbind_interface:drivers/usb/core/driver.c
+10. really_probe:drivers/base/dd.c
+
+Response for case 46a4ad33f345d1dd346e
+1. dccp_timeout_nlattr_to_obj:net/netfilter/nf_conntrack_proto_dccp.c
+2. ctnl_timeout_parse_policy:net/netfilter/nfnetlink_cttimeout.c
+3. cttimeout_default_set:net/netfilter/nfnetlink_cttimeout.c
+4. nlattr_to_dccp:net/netfilter/nf_conntrack_proto_dccp.c
+5. dccp_to_nlattr:net/netfilter/nf_conntrack_proto_dccp.c
+6. dccp_timeout_obj_to_nlattr:net/netfilter/nf_conntrack_proto_dccp.c
+7. cttimeout_new_timeout:net/netfilter/nfnetlink_cttimeout.c
+8. ctnetlink_parse_tuple_proto:net/netfilter/nf_conntrack_netlink.c
+9. ctnetlink_parse_tuple:net/netfilter/nf_conntrack_netlink.c
+10. nfnetlink_rcv_msg:net/netfilter/nfnetlink.c
+
+Response for case 8357fbef0d7bb602de45
+1. uhid_dev_destroy:drivers/hid/uhid.c
+2. uhid_char_release:drivers/hid/uhid.c
+3. UHID_CREATE2:drivers/hid/uhid.c
+4. uhid_dev_create:drivers/hid/uhid.c
+5. uhid_dev_create2:drivers/hid/uhid.c
+6. report_wait:drivers/hid/uhid.c
+7. uhid_queue_event:drivers/hid/uhid.c
+8. __wake_up_common:kernel/sched/wait.c
+9. __wake_up:kernel/sched/wait.c
+10. uhid_report_wake_up:drivers/hid/uhid.c
+
+Response for case e5fd3e65515b48c02a30
+1. fb_set_var:drivers/video/fbdev/core/fbmem.c
+2. fbcon_modechanged:drivers/video/fbdev/core/fbcon.c
+3. fb_check_caps:drivers/video/fbdev/core/fbmem.c
+4. fb_check_foreignness:drivers/video/fbdev/core/fbmem.c
+5. fbcon_clear_margins:drivers/video/fbdev/core/fbcon.c
+6. bit_clear_margins:drivers/video/fbdev/core/bitblit.c
+7. bitfill_aligned:drivers/video/fbdev/core/sysfillrect.c
+8. sys_fillrect:drivers/video/fbdev/core/fb_sys_fops.c
+9. do_fb_ioctl:drivers/video/fbdev/core/fbmem.c
+10. fb_ioctl:drivers/video/fbdev/core/fbmem.c
+
+Response for case f3e749d4c662818ae439
+1. check_btf_line:kernel/bpf/verifier.c
+2. check_btf_info:kernel/bpf/verifier.c
+3. bpf_check:kernel/bpf/verifier.c
+4. kvmalloc_node:mm/util.c
+5. add_subprog:kernel/bpf/verifier.c
+6. add_subprog_and_kfunc:kernel/bpf/verifier.c
+7. check_ld_imm:kernel/bpf/verifier.c
+8. bpf_prog_load:kernel/bpf/syscall.c
+9. __sys_bpf:kernel/bpf/syscall.c
+10. resolve_pseudo_ldimm64:kernel/bpf/verifier.c
+
+Response for case 4d99a966fd74bdeeec36
+1. ext4_expand_extra_isize_ea:fs/ext4/xattr.c
+2. ext4_xattr_move_to_block:fs/ext4/xattr.c
+3. __ext4_expand_extra_isize:fs/ext4/inode.c
+4. ext4_xattr_make_inode_space:fs/ext4/xattr.c
+5. ext4_process_orphan:fs/ext4/orphan.c
+6. ext4_orphan_cleanup:fs/ext4/orphan.c
+7. ext4_inline_data_truncate:fs/ext4/inline.c
+8. ext4_truncate:fs/ext4/inode.c
+9. __ext4_fill_super:fs/ext4/super.c
+10. ext4_fill_super:fs/ext4/super.c
+
+Response for case e2eae5639e7203360018
+1. fq_codel_dequeue:net/sched/sch_fq_codel.c
+2. flow_queue_add:net/sched/sch_fq_codel.c
+3. fq_codel_enqueue:net/sched/sch_fq_codel.c
+4. fq_codel_drop:net/sched/sch_fq_codel.c
+5. fq_codel_reset:net/sched/sch_fq_codel.c
+6. fq_codel_init:net/sched/sch_fq_codel.c
+7. fq_codel_change:net/sched/sch_fq_codel.c
+8. dequeue_skb:net/sched/sch_generic.c
+9. __qdisc_run:net/sched/sch_generic.c
+10. qdisc_restart:net/sched/sch_generic.c
+
+Response for case 05139c4039d0679e19ff
+1. f2fs_setup_casefold:fs/f2fs/super.c
+2. f2fs_init_casefolded_name:fs/f2fs/dir.c
+3. __f2fs_setup_filename:fs/f2fs/dir.c
+4. f2fs_fill_super:fs/f2fs/super.c
+5. f2fs_init_casefolded_name:fs/f2fs/namei.c
+6. __f2fs_setup_filename:fs/f2fs/namei.c
+7. f2fs_prepare_lookup:fs/f2fs/dir.c
+8. init_sb_info:fs/f2fs/super.c
+9. parse_options:fs/f2fs/super.c
+10. utf8_casefold:fs/unicode/utf8-core.c
+
+Response for case 5ea725c25d06fb9114c4
+1. bpf_clone_redirect:net/core/filter.c
+2. ____bpf_clone_redirect:net/core/filter.c
+3. __bpf_redirect:net/core/filter.c
+4. __bpf_redirect_no_mac:net/core/filter.c
+5. __bpf_tx_skb:net/core/filter.c
+6. bpf_test_run:net/bpf/test_run.c
+7. __bpf_skb_change_head:net/core/filter.c
+8. __bpf_skb_change_tail:net/core/filter.c
+9. bpf_prog_test_run_skb:net/bpf/test_run.c
+10. __dev_queue_xmit:net/core/dev.c
+
+Response for case 02c44c7f92e70a73730a
+1. bfs_fill_super:fs/bfs/inode.c
+2. bfs_fill_super:fs/fs_context.c
+3. init_bfs_fs:fs/bfs/inode.c
+4. legacy_get_tree:fs/fs_context.c
+5. mount_nodev:fs/super.c
+6. vfs_get_tree:fs/super.c
+7. get_tree_bdev:fs/super.c
+8. bfs_iget:fs/bfs/inode.c
+9. find_inode:fs/bfs/inode.c
+10. blkdev_get_by_path:fs/block_dev.c
+
+Response for case b33c1cb0a30ebdc8a5f9
+1. qdisc_create:net/sched/sch_api.c
+2. qdisc_put:net/sched/sch_generic.c
+3. tc_modify_qdisc:net/sched/sch_api.c
+4. qdisc_alloc:net/sched/sch_generic.c
+5. qdisc_create:net/sched/sch_generic.c
+6. qdisc_change:net/sched/sch_api.c
+7. dev_graft_qdisc:net/sched/sch_generic.c
+8. rtnetlink_rcv_msg:net/core/rtnetlink.c
+9. qdisc_graft:net/sched/sch_api.c
+10. tcf_block_get_ext:net/sched/cls_api.c
+
+Response for case 0c601d7fbb8122d39093
+1. uhid_dev_destroy:drivers/hid/uhid.c
+2. uhid_char_release:drivers/hid/uhid.c
+3. uhid_dev_create2:drivers/hid/uhid.c
+4. __wake_up_common_lock:drivers/hid/uhid.c
+5. uhid_queue:drivers/hid/uhid.c
+6. uhid_report_wake_up:drivers/hid/uhid.c
+7. uhid_queue_event:drivers/hid/uhid.c
+8. __wake_up_common:kernel/sched/wait.c
+9. __wake_up_common_lock:kernel/sched/wait.c
+10. __fput:fs/file_table.c
+
+Response for case 27b0b464864741b18b99
+1. __flush_work:kernel/workqueue.c
+2. smsusb_probe:drivers/media/usb/siano/smsusb.c
+3. hub_event:drivers/usb/core/hub.c
+4. smsusb_init_device:drivers/media/usb/siano/smsusb.c
+5. hub_port_connect:drivers/usb/core/hub.c
+6. usb_new_device:drivers/usb/core/hub.c
+7. smsusb_start_streaming:drivers/media/usb/siano/smsusb.c
+8. usb_probe_device:drivers/usb/core/driver.c
+9. usb_probe_interface:drivers/usb/core/driver.c
+10. usb_set_configuration:drivers/usb/core/message.c
+
+Response for case a8e049cd3abd342936b6
+1. iomap_iter_done:fs/iomap/iter.c
+2. iomap_iter:fs/iomap/iter.c
+3. iomap_fiemap:fs/iomap/fiemap.c
+4. erofs_fiemap:fs/erofs/data.c
+5. iomap_iter_advance:fs/iomap/iter.c
+6. ioctl_fiemap:fs/ioctl.c
+7. iomap_iter_begin:fs/iomap/fiemap.c
+8. iomap_iter_end:fs/iomap/fiemap.c
+9. erofs_iomap_begin:fs/erofs/data.c
+10. erofs_iomap_end:fs/erofs/data.c
+
+Response for case 9c37714c07194d816417
+1. cleanup_transaction:fs/btrfs/transaction.c
+2. btrfs_commit_transaction:fs/btrfs/transaction.c
+3. __btrfs_end_transaction:fs/btrfs/transaction.c
+4. btrfs_put_transaction:fs/btrfs/transaction.c
+5. btrfs_add_dead_root:fs/btrfs/transaction.c
+6. btrfs_cleanup_transaction:fs/btrfs/disk-io.c
+7. commit_fs_roots:fs/btrfs/transaction.c
+8. btrfs_run_delayed_refs:fs/btrfs/extent-tree.c
+9. btrfs_write_out_cache:fs/btrfs/free-space-cache.c
+10. flush_space:fs/btrfs/space-info.c
+
+Response for case 298c5d8fb4a128bc27b0
+1. ext4_xattr_inode_iget:fs/ext4/xattr.c
+2. ext4_xattr_set_entry:fs/ext4/xattr.c
+3. ext4_xattr_inode_lookup_create:fs/ext4/xattr.c
+4. ext4_xattr_inode_get:fs/ext4/xattr.c
+5. ext4_expand_extra_isize_ea:fs/ext4/xattr.c
+6. ext4_setattr:fs/ext4/inode.c
+7. ext4_xattr_set_handle:fs/ext4/xattr.c
+8. ext4_xattr_set:fs/ext4/xattr.c
+9. __ext4_expand_extra_isize:fs/ext4/inode.c
+10. ext4_try_to_expand_extra_isize:fs/ext4/inode.c
+
+Response for case a8f26a403c169b7593fe
+1. ntfs_fill_super:fs/ntfs3/super.c
+2. ntfs_lookup:fs/ntfs3/namei.c
+3. ntfs_iget5:fs/ntfs3/inode.c
+4. ntfs_create_inode:fs/ntfs3/inode.c
+5. d_splice_alias:fs/dcache.c
+6. __d_add:fs/dcache.c
+7. ntfs_init_from_boot:fs/ntfs3/super.c
+8. ntfs_fs_parse_param:fs/ntfs3/super.c
+9. lookup_open:fs/namei.c
+10. ntfs_new_inode:fs/ntfs3/fsntfs.c
+
+Response for case 3db80bbf66b88d68af9d
+1. reiserfs_lookup_privroot:fs/reiserfs/xattr.c
+2. create_privroot:fs/reiserfs/xattr.c
+3. reiserfs_fill_super:fs/reiserfs/super.c
+4. reiserfs_xattr_init:fs/reiserfs/xattr.c
+5. open_xa_root:fs/reiserfs/xattr.c
+6. reiserfs_new_inode:fs/reiserfs/inode.c
+7. init_inode:fs/reiserfs/inode.c
+8. lookup_one_len:fs/namei.c
+9. xattr_mount_check:fs/reiserfs/xattr.c
+10. reiserfs_lookup:fs/reiserfs/namei.c
+
+Response for case 55cc72f8cc3a549119df
+1. __xfs_filemap_fault:fs/xfs/xfs_file.c
+2. filemap_fault:mm/filemap.c
+3. xfs_map_blocks:fs/xfs/xfs_aops.c
+4. xfs_discard_folio:fs/xfs/xfs_aops.c
+5. xfs_buffered_write_iomap_begin:fs/xfs/xfs_iomap.c
+6. xfs_iomap_write_direct:fs/xfs/xfs_iomap.c
+7. xfs_file_buffered_write:fs/xfs/xfs_file.c
+8. zap_pte_range:mm/memory.c
+9. print_bad_pte:mm/memory.c
+10. exit_mmap:mm/mmap.c
+
+Response for case f816042a7ae2225f25ba
+1. dqput.part.0:fs/quota/dquot.c
+2. __dquot_drop:fs/quota/dquot.c
+3. __ext4_new_inode:fs/ext4/ialloc.c
+4. dquot_alloc_inode:fs/quota/dquot.c
+5. dquot_initialize:fs/ext4/namei.c
+6. qtree_write_dquot:fs/quota/quota_tree.c
+7. ext4_tmpfile:fs/ext4/namei.c
+8. dquot_release:fs/quota/dquot.c
+9. dquot_free_inode:fs/quota/dquot.c
+10. ext4_free_inode:fs/ext4/ialloc.c
+
+Response for case 244acf6996ae0b9122ac763d3099922258c9bd43
+1. sk_stream_kill_queues:net/core/stream.c
+2. inet_csk_destroy_sock:net/ipv4/inet_connection_sock.c
+3. __tcp_close:net/ipv4/tcp.c
+4. tcp_close:net/ipv4/tcp.c
+5. tcp_done:net/ipv4/tcp.c
+6. inet_release:net/ipv4/af_inet.c
+7. __sock_release:net/socket.c
+8. sk_stream_kill_queues:net/core/sock.c
+9. sk_stream_kill_queues:net/ipv4/tcp.c
+10. tcp_write_xmit:net/ipv4/tcp_output.c
+
+Response for case 54b10a5da9e59f1ed979
+1. bfs_fill_super:fs/bfs/inode.c
+2. bfs_fill_super:fs/bfs/dir.c
+3. bfs_fill_super:fs/bfs/file.c
+4. syz_mount_image:fs/bfs/inode.c
+5. syz_mount_image:fs/bfs/file.c
+6. bfs_fill_super:fs/libfs.c
+7. get_tree_bdev:fs/super.c
+8. mount_bdev:fs/super.c
+9. do_new_mount:fs/namespace.c
+10. vfs_get_tree:fs/super.c
+
+Response for case f1faa20eec55e0c8644c
+1. jfs_txnmgr:fs/jfs/jfs_txnmgr.c
+2. jfs_mount:fs/jfs/jfs_mount.c
+3. jfs_fill_super:fs/jfs/super.c
+4. __jfs_xattr_set:fs/jfs/xattr.c
+5. jfs_commit_transaction:fs/jfs/jfs_txnmgr.c
+6. jfs_lazycommit:fs/jfs/jfs_txnmgr.c
+7. jfs_sync:fs/jfs/jfs_txnmgr.c
+8. ea_write:fs/jfs/xattr.c
+9. jfs_iget:fs/jfs/inode.c
+10. jfs_imap:fs/jfs/jfs_imap.c
+
+Response for case 91edf9178386a07d06a7
+1. replace_anon_vma_name:mm/madvise.c
+2. unlink_anon_vmas:mm/rmap.c
+3. anon_vma_free:mm/rmap.c
+4. remove_vma:mm/mmap.c
+5. __mmput:kernel/fork.c
+6. anon_vma_name_alloc:mm/madvise.c
+7. prctl_set_vma:kernel/sys.c
+8. __vma_adjust:mm/mmap.c
+9. __mmdrop:kernel/fork.c
+10. madvise_set_anon_name:mm/madvise.c
+
+Response for case 5e70d01ee8985ae62a3b
+1. ipv6_add_dev:net/ipv6/addrconf.c
+2. register_netdevice:net/core/dev.c
+3. loopback_net_init:drivers/net/loopback.c
+4. addrconf_notify:net/ipv6/addrconf.c
+5. unregister_netdevice:net/core/dev.c
+6. netdev_hold:include/linux/netdevice.h
+7. setup_net:net/core/net_namespace.c
+8. ops_init:net/core/net_namespace.c
+9. call_netdevice_notifiers_info:net/core/dev.c
+10. create_new_namespaces:kernel/nsproxy.c
+
+Response for case 560e6a32d484d7293e37
+1. do_free_extent_accounting:fs/btrfs/extent-tree.c
+2. __btrfs_free_extent:fs/btrfs/extent-tree.c
+3. run_delayed_tree_ref:fs/btrfs/extent-tree.c
+4. btrfs_run_delayed_refs_for_head:fs/btrfs/extent-tree.c
+5. __btrfs_run_delayed_refs:fs/btrfs/extent-tree.c
+6. btrfs_run_delayed_refs:fs/btrfs/extent-tree.c
+7. btrfs_commit_transaction:fs/btrfs/transaction.c
+8. btrfs_cleanup_transaction:fs/btrfs/disk-io.c
+9. btrfs_free_extent:fs/btrfs/extent-tree.c
+10. cleanup_transaction:fs/btrfs/transaction.c
+
+Response for case 7b99aafdcc2eedea6178
+1. sk_stream_kill_queues:net/core/stream.c
+2. inet_csk_destroy_sock:net/ipv4/inet_connection_sock.c
+3. __mptcp_destroy_sock:net/mptcp/protocol.c
+4. mptcp_sock_destruct:net/mptcp/subflow.c
+5. __tcp_close:net/ipv4/tcp.c
+6. tcp_close:net/ipv4/tcp.c
+7. subflow_ulp_release:net/mptcp/subflow.c
+8. mptcp_close:net/mptcp/protocol.c
+9. inet_release:net/ipv4/af_inet.c
+10. sock_close:net/core/stream.c
+
+Response for case 0871b14ca2e2fb64f6e3
+1. vkms_vblank_simulate:drivers/gpu/drm/vkms/vkms_crtc.c
+2. drm_wait_vblank_ioctl:drivers/gpu/drm/drm_vblank.c
+3. drm_vblank_get:drivers/gpu/drm/drm_vblank.c
+4. drm_vblank_enable:drivers/gpu/drm/drm_vblank.c
+5. vkms_enable_vblank:drivers/gpu/drm/vkms/vkms_crtc.c
+6. drm_vblank_enable:drivers/gpu/drm/drm_irq.c
+7. vkms_crtc_init:drivers/gpu/drm/vkms/vkms_crtc.c
+8. drm_vblank_disable_and_save:drivers/gpu/drm/drm_vblank.c
+9. drm_vblank_disable:drivers/gpu/drm/drm_irq.c
+10. drm_vblank_init:drivers/gpu/drm/drm_vblank.c
+
+Response for case 0a89a7b56db04c21a656
+1. diFree:fs/jfs/jfs_imap.c
+2. jfs_fill_super:fs/jfs/super.c
+3. jfs_mount:fs/jfs/jfs_mount.c
+4. jfs_evict_inode:fs/jfs/inode.c
+5. get_metapage:fs/jfs/jfs_mount.c
+6. copy_from_dinode:fs/jfs/jfs_imap.c
+7. jfs_imap:fs/jfs/super.c
+8. init_once:fs/jfs/super.c
+9. parse_options:fs/jfs/super.c
+10. mount_bdev:fs/super.c
+
+Response for case 61e04e51b7ac86930589
+1. nbd_put:drivers/block/nbd.c
+2. nbd_dev_remove:drivers/block/nbd.c
+3. nbd_genl_connect:drivers/block/nbd.c
+4. del_gendisk:block/genhd.c
+5. nbd_open:drivers/block/nbd.c
+6. refcount_dec_and_mutex_lock:lib/refcount.c
+7. blkdev_get_whole:fs/block_dev.c
+8. blkdev_put:fs/block_dev.c
+9. open_mutex:block/genhd.c
+10. nbd_release:drivers/block/nbd.c
+
+Response for case fa4648a5446460b7b963
+1. wnd_init:fs/ntfs3/bitmap.c
+2. ntfs_fill_super:fs/ntfs3/super.c
+3. wnd_map:fs/ntfs3/bitmap.c
+4. wnd_extend:fs/ntfs3/bitmap.c
+5. wnd_scan:fs/ntfs3/bitmap.c
+6. wnd_find:fs/ntfs3/bitmap.c
+7. ntfs_init_from_boot:fs/ntfs3/super.c
+8. __kmalloc_large_node:mm/slab_common.c
+9. __alloc_pages:mm/page_alloc.c
+10. get_tree_bdev:fs/super.c
+
+Response for case d1e3b1d92d25abf97943
+1. smack_fs_context_parse_param:security/smack/smack_lsm.c
+2. legacy_parse_param:security/smack/smack_lsm.c
+3. smack_add_opt:security/smack/smack_lsm.c
+4. match_opt_prefix:security/smack/smack_lsm.c
+5. legacy_parse_param:fs/fs_context.c
+6. legacy_parse_param:security/security.c
+7. __fs_parse:fs/fs_parser.c
+8. legacy_parse_param:fs/fs_parser.c
+9. legacy_parse_param:fs/fsopen.c
+10. smack_set_mnt_opts:security/smack/smack_lsm.c
+
+Response for case fbe81b56f7df4c0fb21b
+1. tls_sk_proto_close:net/tls/tls_main.c
+2. tls_sk_proto_cleanup:net/tls/tls_main.c
+3. IPV6_ADDRFORM:net/tls/tls_main.c
+4. do_tls_setsockopt:net/tls/tls_main.c
+5. inet_csk_destroy_sock:net/tls/tls_sw.c
+6. inet_release:net/ipv6/ipv6_sockglue.c
+7. sk_stream_kill_queues:net/ipv6/ipv6_sockglue.c
+8. sk_stream_kill_queues:net/core/stream.c
+9. tcp_close:net/ipv4/tcp.c
+10. inet_csk_destroy_sock:net/ipv4/inet_connection_sock.c
+
+Response for case 77e4f005cb899d4268d1
+1. nilfs_segctor_prepare_write:fs/nilfs2/segment.c
+2. nilfs_segctor_do_construct:fs/nilfs2/segment.c
+3. nilfs_lookup_dirty_data_buffers:fs/nilfs2/segment.c
+4. nilfs_segctor_collect_blocks:fs/nilfs2/segment.c
+5. nilfs_segctor_apply_buffers:fs/nilfs2/segment.c
+6. nilfs_segctor_scan_file:fs/nilfs2/segment.c
+7. nilfs_segctor_add_file_block:fs/nilfs2/segment.c
+8. nilfs_write_begin:fs/nilfs2/inode.c
+9. create_empty_buffers:fs/buffer.c
+10. nilfs_dat_commit_end:fs/nilfs2/dat.c
+
+Response for case 1917d778024161609247
+1. qrtr_endpoint_post:net/qrtr/qrtr.c
+2. skb_put_data:net/core/skbuff.c
+3. qrtr_tun_write_iter:net/qrtr/tun.c
+4. qrtr_local_enqueue:net/qrtr/qrtr.c
+5. qrtr_node_enqueue:net/qrtr/qrtr.c
+6. __alloc_skb:net/core/skbuff.c
+7. qrtr_sendmsg:net/qrtr/qrtr.c
+8. qrtr_bcast_enqueue:net/qrtr/qrtr.c
+9. skb_put:include/linux/skbuff.h
+10. qrtr_endpoint_register:net/qrtr/qrtr.c
+
+Response for case d43608d061e8847ec9f3
+1. sg_common_write:drivers/scsi/sg.c
+2. blk_rq_map_user_iov:block/blk-map.c
+3. _copy_from_iter:lib/iov_iter.c
+4. copy_page_from_iter:lib/iov_iter.c
+5. bio_copy_user_iov:block/blk-map.c
+6. sg_start_req:drivers/scsi/sg.c
+7. sg_new_write:drivers/scsi/sg.c
+8. iov_iter_init:lib/iov_iter.c
+9. sg_write:drivers/scsi/sg.c
+10. iov_iter_advance:lib/iov_iter.c
+
+Response for case 1631f09646bc214d2e76
+1. ntfs_init_from_boot:fs/ntfs3/super.c
+2. ntfs_fill_super:fs/ntfs3/super.c
+3. ntfs_init_from_boot:fs/ntfs3/fsntfs.c
+4. ntfs_fill_super:fs/ntfs3/fsntfs.c
+5. ntfs_init_from_boot:fs/ntfs3/record.c
+6. ntfs_init_from_boot:fs/ntfs3/inode.c
+7. ntfs_init_from_boot:fs/ntfs3/bitmap.c
+8. ntfs_sb_read:fs/ntfs3/fsntfs.c
+9. ntfs_fs_parse_param:fs/ntfs3/super.c
+10. get_tree_bdev:fs/super.c
+
+Response for case 2d4f8693f438d2bd4bdb
+1. drm_gem_shmem_fault:drivers/gpu/drm/drm_gem_shmem_helper.c
+2. get_pages:drivers/gpu/drm/drm_gem_shmem_helper.c
+3. drm_gem_shmem_get_pages:drivers/gpu/drm/drm_gem_shmem_helper.c
+4. drm_gem_shmem_get_pages_locked:drivers/gpu/drm/drm_gem_shmem_helper.c
+5. drm_gem_shmem_mmap:drivers/gpu/drm/drm_gem_shmem_helper.c
+6. drm_gem_shmem_vmap:drivers/gpu/drm/drm_gem_shmem_helper.c
+7. drm_gem_shmem_vmap_locked:drivers/gpu/drm/drm_gem_shmem_helper.c
+8. vmf_insert_pfn_prot:mm/memory.c
+9. drm_gem_mmap_obj:drivers/gpu/drm/drm_gem.c
+10. drm_gem_shmem_free:drivers/gpu/drm/drm_gem_shmem_helper.c
+
+Response for case 0b6b2d6d6cefa8b462930e55be699efba635788f
+1. __nf_unregister_net_hook:net/netfilter/core.c
+2. nft_netdev_unregister_hooks:net/netfilter/nf_tables_api.c
+3. __nft_release_basechain:net/netfilter/nf_tables_api.c
+4. nf_tables_unregister_hook:net/netfilter/nf_tables_api.c
+5. nf_tables_netdev_event:net/netfilter/nft_chain_filter.c
+6. nf_unregister_net_hook:net/netfilter/core.c
+7. nft_netdev_event:net/netfilter/nft_chain_filter.c
+8. __nft_release_hooks:net/netfilter/nf_tables_api.c
+9. nf_tables_exit_net:net/netfilter/nf_tables_api.c
+10. ieee80211_remove_interfaces:net/mac80211/iface.c
+
+Response for case 1bb51491ca5df96a5f724899d1dbb87afda61419
+1. hci_conn_hash_flush:net/bluetooth/hci_conn.c
+2. hci_conn_unlink:net/bluetooth/hci_conn.c
+3. hci_conn_del:net/bluetooth/hci_conn.c
+4. hci_dev_close_sync:net/bluetooth/hci_sync.c
+5. hci_unregister_dev:net/bluetooth/hci_core.c
+6. vhci_release:drivers/bluetooth/hci_vhci.c
+7. hci_dev_do_close:net/bluetooth/hci_core.c
+8. hci_conn_add:net/bluetooth/hci_conn.c
+9. sco_connect:net/bluetooth/sco.c
+10. sco_sock_connect:net/bluetooth/sco.c
+
+Response for case 08d09127d5fca845e6d94dea344c5b758bc45615
+1. rxrpc_do_sendmsg:net/rxrpc/sendmsg.c
+2. __rxrpc_disconnect_call:net/rxrpc/conn_object.c
+3. rxrpc_disconnect_call:net/rxrpc/conn_object.c
+4. rxrpc_disconnect_client_call:net/rxrpc/conn_client.c
+5. rxrpc_release_sock:net/rxrpc/af_rxrpc.c
+6. rxrpc_kill_connection:net/rxrpc/conn_object.c
+7. rxrpc_destroy_connection:net/rxrpc/conn_object.c
+8. kcm_unattach:net/kcm/kcmsock.c
+9. kcm_release:net/kcm/kcmsock.c
+10. rxrpc_process_call:net/rxrpc/call_event.c
+
+Response for case 33f3faaa0c08744f7d40
+1. ntfs_fill_super:fs/ntfs3/super.c
+2. ntfs_init_from_boot:fs/ntfs3/super.c
+3. syz_mount_image:fs/ntfs3/super.c
+4. ntfs_load_nls:fs/ntfs3/super.c
+5. ntfs_fs_reconfigure:fs/ntfs3/super.c
+6. ntfs_read_mft:fs/ntfs3/inode.c
+7. ntfs_extend_mft:fs/ntfs3/fsntfs.c
+8. mi_read:fs/ntfs3/record.c
+9. ntfs_put_super:fs/ntfs3/super.c
+10. __alloc_pages:mm/page_alloc.c
+
+Response for case 92968395eedbdbd3617d
+1. cttimeout_net_exit:net/netfilter/nfnetlink_cttimeout.c
+2. cttimeout_del_timeout:net/netfilter/nfnetlink_cttimeout.c
+3. cttimeout_new_timeout:net/netfilter/nfnetlink_cttimeout.c
+4. ctnl_timeout_try_del:net/netfilter/nfnetlink_cttimeout.c
+5. nf_ct_timeout_put:net/netfilter/nf_conntrack_timeout.c
+6. nf_ct_timeout_unregister:net/netfilter/nf_conntrack_timeout.c
+7. __nf_ct_timeout_put:net/netfilter/nf_conntrack_timeout.c
+8. ctnl_timeout_find_get:net/netfilter/nfnetlink_cttimeout.c
+9. cttimeout_net_pre_exit:net/netfilter/nfnetlink_cttimeout.c
+10. ops_exit_list:net/core/net_namespace.c
+
+Response for case 703d9e154b3b58277261
+1. setup_udp_tunnel_sock:net/ipv4/udp_tunnel_core.c
+2. l2tp_tunnel_register:net/l2tp/l2tp_core.c
+3. udp_tunnel_encap_enable:include/net/udp_tunnel.h
+4. static_key_slow_inc:kernel/jump_label.c
+5. cpus_read_lock:kernel/cpu.c
+6. percpu_down_read:kernel/locking/percpu-rwsem.c
+7. l2tp_nl_cmd_tunnel_create:net/l2tp/l2tp_netlink.c
+8. genl_family_rcv_msg_doit:net/netlink/genetlink.c
+9. l2tp_tunnel_create:net/l2tp/l2tp_core.c
+10. l2tp_tunnel_sock_create:net/l2tp/l2tp_core.c
+
+Response for case 12be9aa373be9d8727cdd172f190de39528a413a
+1. selinux_sk_alloc_security:security/selinux/hooks.c
+2. security_sk_alloc:include/linux/security.h
+3. sk_alloc:net/core/sock.c
+4. selinux_socket_post_create:security/selinux/hooks.c
+5. __sock_create:net/socket.c
+6. mptcp_subflow_create_socket:net/mptcp/subflow.c
+7. new_sock:net/mptcp/subflow.c
+8. inet_create:net/ipv4/af_inet.c
+9. sock_init_data:net/core/sock.c
+10. selinux_socket_recvmsg:security/selinux/hooks.c
+
+Response for case 2dbce17f865f34c37da63de733f31001f293d78f
+1. sysfs_reconfigure:fs/sysfs/mount.c
+2. sysfs_kill_sb:fs/sysfs/mount.c
+3. kernfs_kill_sb:fs/kernfs/mount.c
+4. sysfs_remove_dir:fs/sysfs/dir.c
+5. sysfs_create_dir_ns:fs/sysfs/dir.c
+6. sysfs_fs_context_free:fs/sysfs/mount.c
+7. sysfs_init_fs_context:fs/sysfs/mount.c
+8. sysfs_create_mount_point:fs/sysfs/dir.c
+9. legacy_reconfigure:fs/fs_context.c
+10. umount_check:fs/dcache.c
+
+Response for case 1bc76a5779300075e3466a0e2abcd753df212779
+1. h5_recv:drivers/bluetooth/hci_h5.c
+2. h5_open:drivers/bluetooth/hci_h5.c
+3. h5_close:drivers/bluetooth/hci_h5.c
+4. hci_uart_tty_open:drivers/bluetooth/hci_ldisc.c
+5. hci_uart_setup:drivers/bluetooth/hci_ldisc.c
+6. h5_btrtl_resume:drivers/bluetooth/hci_h5.c
+7. pm_runtime_enable:drivers/base/power/runtime.c
+8. pm_runtime_init:drivers/base/power/runtime.c
+9. hci_uart_tty_close:drivers/bluetooth/hci_ldisc.c
+10. h5_peer_reset:drivers/bluetooth/hci_h5.c
+
+Response for case 1bef50bdd9622a1969608d1090b2b4a588d0c6ac
+1. snd_device_free:sound/core/device.c
+2. __snd_device_free:sound/core/device.c
+3. snd_device_disconnect:sound/core/device.c
+4. device_release:drivers/base/core.c
+5. snd_soc_unregister_component:sound/soc/soc-core.c
+6. soc_remove_component:sound/soc/soc-core.c
+7. __fput:fs/file_table.c
+8. filp_close:fs/open.c
+9. put_files_struct:fs/file.c
+10. __close_range:fs/file.c
+
+Response for case 19a04b43c75ed1092021010419b5e560a8172c4f
+1. hidraw_report_event:drivers/hid/hidraw.c
+2. hidraw_release:drivers/hid/hidraw.c
+3. drop_ref:drivers/hid/hidraw.c
+4. hidraw_connect:drivers/hid/hidraw.c
+5. hidraw_open:drivers/hid/hidraw.c
+6. hid_report_raw_event:drivers/hid/hid-core.c
+7. hid_input_report:drivers/hid/hid-core.c
+8. hid_irq_in:drivers/hid/usbhid/hid-core.c
+9. hidraw_read:drivers/hid/hidraw.c
+10. hid_close_report:drivers/hid/hid-core.c
+
+Response for case 2a42bcdee55085e729aa4e472bf86adf2036ad40
+1. hugetlbfs_fill_super:fs/hugetlbfs/inode.c
+2. hugetlbfs_get_root:fs/hugetlbfs/inode.c
+3. reconfigure_super:fs/super.c
+4. legacy_reconfigure:fs/fs_context.c
+5. hugetlbfs_init_fs_context:fs/hugetlbfs/inode.c
+6. generic_shutdown_super:fs/super.c
+7. kill_litter_super:fs/super.c
+8. umount_check:fs/dcache.c
+9. cleanup_mnt:fs/namespace.c
+10. vfs_fsconfig_locked:fs/fsopen.c
+
+Response for case 38efa4618c3379cf98642b9379d6e340b14d2702
+1. io_do_iopoll:fs/io_uring.c
+2. io_iopoll_try_reap_events:fs/io_uring.c
+3. io_ring_ctx_wait_and_kill:fs/io_uring.c
+4. io_uring_try_cancel_requests:fs/io_uring.c
+5. io_poll_remove_all:fs/io_uring.c
+6. io_poll_remove_entries:fs/io_uring.c
+7. __io_remove_buffers:fs/io_uring.c
+8. io_remove_buffers:fs/io_uring.c
+9. io_uring_release:fs/io_uring.c
+10. io_ring_ctx_free:fs/io_uring.c
+
+Response for case 1a201ce4f0f4ab2f165b93d0ce5c15ebe1a5b321
+1. prctl_set_vma:kernel/sys.c
+2. replace_anon_vma_name:mm/madvise.c
+3. anon_vma_name_alloc:mm/madvise.c
+4. __split_vma:mm/mmap.c
+5. vma_merge:mm/mmap.c
+6. copy_vma:mm/mmap.c
+7. remove_vma:mm/mmap.c
+8. exit_mmap:mm/mmap.c
+9. unlink_anon_vmas:mm/rmap.c
+10. __do_sys_prctl:kernel/sys.c
+
+Response for case 2482c46517c04822f40780fde741031bf9493450
+1. atusb_disconnect:drivers/net/ieee802154/atusb.c
+2. atusb_probe:drivers/net/ieee802154/atusb.c
+3. atusb_alloc_urbs:drivers/net/ieee802154/atusb.c
+4. usb_scuttle_anchored_urbs:drivers/usb/core/urb.c
+5. usb_kill_anchored_urbs:drivers/usb/core/urb.c
+6. usb_unbind_interface:drivers/usb/core/driver.c
+7. usb_free_urb:drivers/usb/core/urb.c
+8. really_probe:drivers/base/dd.c
+9. usb_probe_interface:drivers/usb/core/driver.c
+10. usb_set_configuration:drivers/usb/core/message.c
+
+Response for case 01383b29d139cf9c9f9d9bd6e9947474ffe657a6
+1. move_vma:mm/mremap.c
+2. mremap_to:mm/mremap.c
+3. __get_user_pages:mm/gup.c
+4. check_vma_flags:mm/gup.c
+5. move_page_tables:mm/mremap.c
+6. vmsplice_to_pipe:fs/splice.c
+7. vma_expand:mm/mmap.c
+8. vma_permits_fault:mm/gup.c
+9. __iov_iter_get_pages_alloc:lib/iov_iter.c
+10. vma_expandable:mm/mremap.c
+
+Response for case 32c85d199d85c11202246570956a2cbe272f235a
+1. reg_set_rd_user:net/wireless/reg.c
+2. regulatory_hint_user:net/wireless/reg.c
+3. nl80211_req_set_reg:net/wireless/nl80211.c
+4. is_user_regdom_saved:net/wireless/reg.c
+5. restore_regulatory_settings:net/wireless/reg.c
+6. restore_alpha2:net/wireless/reg.c
+7. reg_process_hint_user:net/wireless/reg.c
+8. __reg_process_hint_user:net/wireless/reg.c
+9. set_regdom:net/wireless/reg.c
+10. call_crda:net/wireless/reg.c
+
+Response for case 35dd38010e383ee37d27b39f6b50eb25b4c92dd2
+1. smsusb_probe:drivers/media/usb/siano/smsusb.c
+2. smsusb_init_device:drivers/media/usb/siano/smsusb.c
+3. smsusb_start_streaming:drivers/media/usb/siano/smsusb.c
+4. smsusb_stop_streaming:drivers/media/usb/siano/smsusb.c
+5. smsusb_term_device:drivers/media/usb/siano/smsusb.c
+6. usb_probe_interface:drivers/usb/core/driver.c
+7. hub_event:drivers/usb/core/hub.c
+8. hub_port_connect:drivers/usb/core/hub.c
+9. unbind_marked_interfaces:drivers/usb/core/driver.c
+10. __flush_work:kernel/workqueue.c
+
+Response for case 33e08264ba252fcf3ed89b69fd088ac976363535
+1. udf_extend_file:fs/udf/inode.c
+2. udf_setsize:fs/udf/inode.c
+3. udf_setattr:fs/udf/file.c
+4. udf_truncate:fs/udf/truncate.c
+5. udf_truncate_extents:fs/udf/truncate.c
+6. udf_add_aext:fs/udf/inode.c
+7. udf_insert_aext:fs/udf/inode.c
+8. udf_delete_aext:fs/udf/inode.c
+9. __udf_add_aext:fs/udf/inode.c
+10. udf_new_block:fs/udf/balloc.c
+
+Response for case 32577e96d88447ded2d3b76d71254fb855245837
+1. tomoyo_supervisor:drivers/video/fbdev/core/fbcmap.c
+2. tomoyo_init_log:drivers/video/fbdev/core/fbcmap.c
+3. bit_putcs:drivers/video/fbdev/core/bitblit.c
+4. __fb_pad_aligned_buffer:include/linux/fb.h
+5. bit_putcs_aligned:drivers/video/fbdev/core/bitblit.c
+6. fbcon_putcs:drivers/video/fbdev/core/fbcon.c
+7. do_con_write:drivers/tty/vt/vt.c
+8. con_flush:drivers/tty/vt/vt.c
+9. vt_resizex:drivers/tty/vt/vt_ioctl.c
+10. vc_do_selection:drivers/tty/vt/selection.c
+
+Response for case 39b560f8c5d46a5c107b83c6a1e8ae4051826de0
+1. pse_prepare_data:net/ethtool/pse-pd.c
+2. prepare_data:net/ethtool/pse-pd.c
+3. ethnl_default_dump_one:net/ethtool/netlink.c
+4. pse_get_pse_attributes:net/ethtool/pse-pd.c
+5. ethnl_default_dumpit:net/ethtool/netlink.c
+6. ethnl_parse_header_dev_get:net/ethtool/netlink.c
+7. ethnl_default_start:net/ethtool/netlink.c
+8. ethnl_ops_begin:net/ethtool/netlink.c
+9. dev_ethtool:net/ethtool/ioctl.c
+10. pse_set_pse_config:net/ethtool/pse-pd.c
+
+Response for case 35ca150acc791b7283bb643a0edbbc185aa4a69e
+1. smc_nl_handle_smcr_dev:net/smc/smc_ib.c
+2. smc_ib_add_dev:net/smc/smc_ib.c
+3. smc_ib_setup_per_ibdev:net/smc/smc_ib.c
+4. smc_nl_prep_smcr_dev:net/smc/smc_ib.c
+5. smcr_nl_get_device:net/smc/af_smc.c
+6. rxe_newlink:drivers/infiniband/sw/rxe/rxe.c
+7. smcr_port_add:net/smc/smc_core.c
+8. macvlan_common_newlink:drivers/net/macvlan.c
+9. smc_pnet_add_ib:net/smc/smc_pnet.c
+10. smc_ib_determine_gid:net/smc/smc_ib.c
+
+Response for case 4894a6d412735394296e80976329c1a6848acc14
+1. init_file:fs/file_table.c
+2. alloc_empty_backing_file:fs/file_table.c
+3. alloc_empty_file_noaccount:fs/file_table.c
+4. alloc_empty_file:fs/file_table.c
+5. alloc_file:fs/file_table.c
+6. alloc_file_pseudo:fs/file_table.c
+7. backing_file_open:fs/open.c
+8. ovl_open_realfile:fs/overlayfs/file.c
+9. ovl_splice_read:fs/overlayfs/file.c
+10. ovl_real_fdget:fs/overlayfs/file.c
+
+Response for case 4a547542bb29dc957c096f0c95ef9154e93d68d3
+1. ext4_ind_remove_space:fs/ext4/indirect.c
+2. ext4_block_to_path:fs/ext4/indirect.c
+3. ext4_get_branch:fs/ext4/indirect.c
+4. ext4_punch_hole:fs/ext4/inode.c
+5. ext4_punch_hole:fs/ext4/indirect.c
+6. ext4_fallocate:fs/ext4/extents.c
+7. ext4_fallocate:fs/ext4/inode.c
+8. ext4_fallocate:fs/ext4/indirect.c
+9. ext4_clear_blocks:fs/ext4/indirect.c
+10. ext4_ioctl_setflags:fs/ext4/ioctl.c
+
+Response for case 3ac451d171eed4f6027b4c46176f6eda99e8547b
+1. evdev_pass_values:drivers/input/evdev.c
+2. kill_fasync:fs/fcntl.c
+3. __pass_event:drivers/input/evdev.c
+4. input_handle_event:drivers/input/input.c
+5. input_inject_event:drivers/input/input.c
+6. kill_fasync_rcu:fs/fcntl.c
+7. evdev_events:drivers/input/evdev.c
+8. input_pass_values:drivers/input/input.c
+9. input_to_handler:drivers/input/input.c
+10. f_getown:fs/fcntl.c
+
+Response for case 52eac4b79cfb13db9907627c1afc185252168cdc
+1. snd_usbmidi_get_ms_info:sound/usb/midi.c
+2. find_usb_ms_endpoint_descriptor:sound/usb/midi.c
+3. snd_usbmidi_detect_endpoints:sound/usb/midi.c
+4. snd_usb_validate_midi_desc:sound/usb/validate.c
+5. __snd_usbmidi_create:sound/usb/midi.c
+6. snd_usb_create_quirk:sound/usb/quirks.c
+7. snd_usb_find_csint_desc:sound/usb/helper.c
+8. snd_usb_find_desc:sound/usb/helper.c
+9. validate_desc:sound/usb/validate.c
+10. snd_usb_validate_audio_desc:sound/usb/validate.c
+
+Response for case 6e96f5bd56bfecdaa0bfeaf2695a25cc80bfbd9a
+1. ip_set_comment_free:net/netfilter/ipset/ip_set_core.c
+2. hash_net4_add:net/netfilter/ipset/ip_set_core.c
+3. hash_net4_add:net/netfilter/ipset/ip_set_hash_gen.h
+4. ip_set_init_comment:net/netfilter/ipset/ip_set_core.c
+5. ip_set_ext_destroy:net/netfilter/ipset/ip_set_core.c
+6. ip_set_ext_destroy:net/netfilter/ipset/ip_set_hash_gen.h
+7. ip_set_get_extensions:net/netfilter/ipset/ip_set_core.c
+8. ip_set_comment_free:net/netfilter/ipset/ip_set_hash_gen.h
+9. ip_set_put_extensions:net/netfilter/ipset/ip_set_core.c
+10. mtype_add:net/netfilter/ipset/ip_set_hash_gen.h
+
+Response for case 49b6f675bead6969f913a3f7dcef4d28fdd13296
+1. do_vmi_align_munmap:mm/mmap.c
+2. vma_merge:mm/mmap.c
+3. validate_mm:mm/mmap.c
+4. do_vmi_munmap:mm/mmap.c
+5. split_vma:mm/mmap.c
+6. vma_expand:mm/mmap.c
+7. __vm_munmap:mm/mmap.c
+8. vma_prepare:mm/mmap.c
+9. mmap_region:mm/mmap.c
+10. vm_munmap:mm/mmap.c
+
+Response for case 637351e3088fc2aed419d941674f2774f4162ea2
+1. con_font_get:drivers/tty/vt/vt.c
+2. con_font_op:drivers/tty/vt/vt.c
+3. con_font_set:drivers/tty/vt/vt.c
+4. con_font_op:drivers/tty/vt/vt_ioctl.c
+5. vt_ioctl:drivers/tty/vt/vt_ioctl.c
+6. vt_k_ioctl:drivers/tty/vt/vt_ioctl.c
+7. vc_uniscr_alloc:drivers/tty/vt/vt.c
+8. vc_allocate:drivers/tty/vt/vt.c
+9. con_get_unimap:drivers/tty/vt/consolemap.c
+10. do_con_write:drivers/tty/vt/vt.c
+
+Response for case 67d5dc5f84651b05fc3c2cb3d163037f414a10f4
+1. qrtr_tun_write_iter:net/qrtr/tun.c
+2. __alloc_pages_nodemask:mm/page_alloc.c
+3. alloc_pages_current:mm/mempolicy.c
+4. kmalloc_order_trace:mm/slab_common.c
+5. kmalloc_order:mm/slab_common.c
+6. kzalloc:net/qrtr/tun.c
+7. do_mbind:mm/mempolicy.c
+8. do_set_mempolicy:mm/mempolicy.c
+9. __alloc_pages_slowpath:mm/page_alloc.c
+10. qrtr_tun_send:net/qrtr/tun.c
+
+Response for case 789df5b54ebd19aec0b5c3900c933d1910db8ec5
+1. ext4_xattr_move_to_block:fs/ext4/xattr.c
+2. ext4_xattr_make_inode_space:fs/ext4/xattr.c
+3. ext4_expand_extra_isize_ea:fs/ext4/xattr.c
+4. ext4_orphan_cleanup:fs/ext4/orphan.c
+5. ext4_process_orphan:fs/ext4/orphan.c
+6. __ext4_expand_extra_isize:fs/ext4/inode.c
+7. ext4_try_to_expand_extra_isize:fs/ext4/inode.c
+8. ext4_inline_data_truncate:fs/ext4/inline.c
+9. ext4_truncate:fs/ext4/inode.c
+10. ext4_xattr_set_handle:fs/ext4/xattr.c
+
+Response for case 625eef83808cdc8a4d6775801b04e985eb32fcf7
+1. btrfs_split_ordered_extent:fs/btrfs/ordered-data.c
+2. btrfs_extract_ordered_extent:fs/btrfs/inode.c
+3. btrfs_dio_submit_io:fs/btrfs/inode.c
+4. btrfs_direct_write:fs/btrfs/file.c
+5. btrfs_dio_write:fs/btrfs/inode.c
+6. btrfs_do_write_iter:fs/btrfs/file.c
+7. btrfs_alloc_ordered_extent:fs/btrfs/ordered-data.c
+8. btrfs_remove_ordered_extent:fs/btrfs/ordered-data.c
+9. btrfs_create_dio_extent:fs/btrfs/inode.c
+10. __iomap_dio_rw:fs/iomap/direct-io.c
+
+Response for case 8d31c0d56f794feb72c2d359795c74908dab34c0
+1. ethnl_bitmap32_not_zero:net/ethtool/bitset.c
+2. ethnl_compact_sanity_checks:net/ethtool/bitset.c
+3. ethnl_update_bitset32:net/ethtool/bitset.c
+4. ethnl_set_linkmodes:net/ethtool/linkmodes.c
+5. ethnl_update_bitset:net/ethtool/bitset.c
+6. ethnl_update_bitset32:net/ethtool/linkmodes.c
+7. ethnl_compact_sanity_checks:net/ethtool/linkmodes.c
+8. ethnl_update_bitset32_verbose:net/ethtool/bitset.c
+9. ethnl_validate_bitset:net/ethtool/linkmodes.c
+10. ethnl_parse_bit:net/ethtool/bitset.c
+
+Response for case 602383e46c337fd7a0b8346ee047fe2778b76647
+1. evdev_pass_values:drivers/input/evdev.c
+2. kill_fasync:fs/fcntl.c
+3. __pass_event:drivers/input/evdev.c
+4. input_handle_event:drivers/input/input.c
+5. send_sigurg:fs/fcntl.c
+6. input_inject_event:drivers/input/input.c
+7. evdev_events:drivers/input/evdev.c
+8. evdev_write:drivers/input/evdev.c
+9. tcp_check_urg:net/ipv4/tcp_input.c
+10. sk_send_sigurg:net/core/sock.c
+
+Response for case 75a2a727e4636c7a34dbd49197b15c3de92a8f7f
+1. hugetlb_wp:mm/hugetlb.c
+2. hugetlb_no_page:mm/hugetlb.c
+3. hugetlb_fault:mm/hugetlb.c
+4. follow_hugetlb_page:mm/hugetlb.c
+5. ptrace_access_vm:kernel/ptrace.c
+6. generic_ptrace_pokedata:kernel/ptrace.c
+7. __get_user_pages_remote:mm/gup.c
+8. hugetlb_install_page:mm/hugetlb.c
+9. hugetlb_change_protection:mm/hugetlb.c
+10. huge_pmd_unshare:mm/hugetlb.c
+
+Response for case 4ed0d6eea4561854b366170155a78652da4cef29
+1. vhci_hub_control:drivers/usb/usbip/vhci_hcd.c
+2. rh_call_control:drivers/usb/usbip/vhci_hcd.c
+3. rh_urb_enqueue:drivers/usb/usbip/vhci_hcd.c
+4. vhci_urb_enqueue:drivers/usb/usbip/vhci_hcd.c
+5. vhci_hcd_init:drivers/usb/usbip/vhci_hcd.c
+6. vhci_setup:drivers/usb/usbip/vhci_hcd.c
+7. vhci_start:drivers/usb/usbip/vhci_hcd.c
+8. vhci_hub_status:drivers/usb/usbip/vhci_hcd.c
+9. rh_port_connect:drivers/usb/usbip/vhci_hcd.c
+10. vhci_device_reset:drivers/usb/usbip/vhci_hcd.c
+
+Response for case 699e4f546c33df9781a67891d42766bbbe3ca30b
+1. fuse_reverse_inval_entry:fs/fuse/dir.c
+2. fuse_notify_delete:fs/fuse/dev.c
+3. fuse_dev_do_write:fs/fuse/dev.c
+4. fuse_notify:fs/fuse/dev.c
+5. d_invalidate:fs/dcache.c
+6. lock_parent:fs/dcache.c
+7. fuse_unlink:fs/fuse/dir.c
+8. fuse_rename_common:fs/fuse/dir.c
+9. inode_lock:include/linux/fs.h
+10. fuse_change_attributes_common:fs/fuse/inode.c
+
+Response for case 7f34dec8b4c3be61baad2f552b05d2011d64ae87
+1. std_validate:drivers/media/v4l2-core/v4l2-ctrls.c
+2. validate_new:drivers/media/v4l2-core/v4l2-ctrls.c
+3. set_ctrl:drivers/media/v4l2-core/v4l2-ctrls.c
+4. v4l2_s_ctrl:drivers/media/v4l2-core/v4l2-ctrls.c
+5. __v4l2_ctrl_s_ctrl_compound:drivers/media/v4l2-core/v4l2-ctrls.c
+6. check_range:drivers/media/v4l2-core/v4l2-ctrls.c
+7. v4l2_ctrl_fill:drivers/media/v4l2-core/v4l2-ctrls.c
+8. std_validate_compound:drivers/media/v4l2-core/v4l2-ctrls.c
+9. set_ctrl:drivers/media/v4l2-core/v4l2-ioctl.c
+10. v4l_s_ctrl:drivers/media/v4l2-core/v4l2-ioctl.c
+
+Response for case 6e185619b66eae1ef09684c5f6e283d6cfb5ba84
+1. btrfs_drop_extents:fs/btrfs/file.c
+2. cow_file_range_inline:fs/btrfs/inode.c
+3. cow_file_range:fs/btrfs/inode.c
+4. fallback_to_cow:fs/btrfs/inode.c
+5. run_delalloc_nocow:fs/btrfs/inode.c
+6. btrfs_run_delalloc_range:fs/btrfs/extent_io.c
+7. writepage_delalloc:fs/btrfs/extent_io.c
+8. btrfs_sync_file:fs/btrfs/file.c
+9. btrfs_set_extent_delalloc:fs/btrfs/inode.c
+10. btrfs_clear_delalloc_extent:fs/btrfs/inode.c
+
+Response for case 6922c8c31f1fdd120d1cef3f58b319b6dd1d8c00
+1. qp_host_get_user_memory:drivers/misc/vmw_vmci/vmci_queue_pair.c
+2. qp_release_pages:drivers/misc/vmw_vmci/vmci_queue_pair.c
+3. qp_host_register_user_memory:drivers/misc/vmw_vmci/vmci_queue_pair.c
+4. qp_broker_create:drivers/misc/vmw_vmci/vmci_queue_pair.c
+5. qp_broker_alloc:drivers/misc/vmw_vmci/vmci_queue_pair.c
+6. qp_host_unregister_user_memory:drivers/misc/vmw_vmci/vmci_queue_pair.c
+7. qp_alloc_ppn_set:drivers/misc/vmw_vmci/vmci_queue_pair.c
+8. qp_alloc_queue:drivers/misc/vmw_vmci/vmci_queue_pair.c
+9. vmci_host_do_alloc_queuepair:drivers/misc/vmw_vmci/vmci_host.c
+10. vmci_qp_broker_set_page_store:drivers/misc/vmw_vmci/vmci_queue_pair.c
+
+Response for case b36d7e444fe532685b683ae7980f4e3a184f0ad8
+1. ethnl_update_bitset32:net/ethtool/bitset.c
+2. ethnl_compact_sanity_checks:net/ethtool/bitset.c
+3. ethnl_bitmap32_not_zero:net/ethtool/bitset.c
+4. ethnl_update_bitset:net/ethtool/bitset.c
+5. ethnl_update_linkmodes:net/ethtool/linkmodes.c
+6. ethnl_set_linkmodes:net/ethtool/linkmodes.c
+7. ethnl_bitset_is_compact:net/ethtool/bitset.c
+8. ethnl_bitset32_is_compact:net/ethtool/bitset.c
+9. ethnl_default_doit:net/ethtool/netlink.c
+10. genl_family_rcv_msg_doit:net/netlink/genetlink.c
+
+Response for case b5ecc684bb9e49db213e88f69d4ce80f7e20238d
+1. nci_start_poll:net/nfc/nci/core.c
+2. nfc_genl_start_poll:net/nfc/netlink.c
+3. nci_request:net/nfc/nci/core.c
+4. nci_set_local_general_bytes:net/nfc/nci/core.c
+5. nfc_urelease_event_work:net/nfc/netlink.c
+6. nfc_register_device:net/nfc/core.c
+7. nci_register_device:net/nfc/nci/core.c
+8. virtual_ncidev_open:drivers/nfc/virtual_ncidev.c
+9. nfc_dev_up:net/nfc/core.c
+10. nci_open_device:net/nfc/nci/core.c
+
+Response for case 949ecf93b67ab1df8f890571d24ef9db50872c96
+1. netdev_wait_allrefs:net/core/dev.c
+2. unregister_netdevice:net/core/dev.c
+3. dev_xdp_detach_link:net/core/dev.c
+4. cgroup_exit:kernel/cgroup/cgroup.c
+5. free_netdev:net/core/dev.c
+6. bpf_link_put:kernel/bpf/syscall.c
+7. css_release:kernel/cgroup/cgroup.c
+8. cleanup_net:net/core/net_namespace.c
+9. rollback_registered_many:net/core/dev.c
+10. inetdev_destroy:net/ipv4/devinet.c
+
+Response for case cdf00205127303ca523678fbb9d7eb7613632dba
+1. io_uring_create:fs/io_uring.c
+2. __io_uring_free:fs/io_uring.c
+3. io_sqe_files_unregister:fs/io_uring.c
+4. io_sqe_buffer_unregister:fs/io_uring.c
+5. io_uring_cancel_task_requests:fs/io_uring.c
+6. io_file_data_ref_zero:fs/io_uring.c
+7. io_uring_del_task_file:fs/io_uring.c
+8. __io_uring_files_cancel:fs/io_uring.c
+9. io_cancel_defer_files:fs/io_uring.c
+10. io_poll_remove_all:fs/io_uring.c
+
+Response for case 8dc7a6aed7b8ead4c982ecdf2cd1ea5a4c3b57bb
+1. fuse_setattr:fs/fuse/dir.c
+2. notify_change:fs/attr.c
+3. fuse_file_fallocate:fs/fuse/file.c
+4. fuse_do_setattr:fs/fuse/dir.c
+5. __remove_privs:fs/inode.c
+6. fuse_change_attributes:fs/fuse/inode.c
+7. setattr_prepare:fs/attr.c
+8. file_modified_flags:fs/inode.c
+9. may_setattr:fs/attr.c
+10. fuse_flush_times:fs/fuse/dir.c
+
+Response for case ac6fc97113de554dc57614c3ffa4c6a2c2668a97
+1. snto32:drivers/hid/hid-core.c
+2. hid_input_fetch_field:drivers/hid/hid-core.c
+3. hid_process_report:drivers/hid/hid-core.c
+4. hid_report_raw_event:drivers/hid/hid-core.c
+5. hid_register_field:drivers/hid/hid-core.c
+6. hid_add_field:drivers/hid/hid-core.c
+7. hid_parser_main:drivers/hid/hid-core.c
+8. hid_scan_report:drivers/hid/hid-core.c
+9. hid_irq_in:drivers/hid/usbhid/hid-core.c
+10. hid_input_report:drivers/hid/hid-core.c
+
+Response for case ca2299cf11b3e3d3d0f44ac479410a14eecbd326
+1. qrtr_port_assign:net/qrtr/qrtr.c
+2. __qrtr_bind:net/qrtr/qrtr.c
+3. qrtr_bind:net/qrtr/qrtr.c
+4. idr_alloc:lib/idr.c
+5. qrtr_create:net/qrtr/qrtr.c
+6. qrtr_release:net/qrtr/qrtr.c
+7. qrtr_port_remove:net/qrtr/qrtr.c
+8. server_add:net/qrtr/ns.c
+9. ctrl_cmd_new_server:net/qrtr/ns.c
+10. qrtr_endpoint_register:net/qrtr/qrtr.c
+
+Response for case b929091c762f0a3060a9941dcacfed0c3b4a903d
+1. j1939_sk_errqueue:net/can/j1939/socket.c
+2. __j1939_session_cancel:net/can/j1939/transport.c
+3. j1939_tp_rxtimer:net/can/j1939/transport.c
+4. j1939_sk_netdev_event_netdown:net/can/j1939/socket.c
+5. j1939_sk_queue_drop_all:net/can/j1939/socket.c
+6. j1939_session_activate:net/can/j1939/transport.c
+7. j1939_sk_queue_activate_next_locked:net/can/j1939/socket.c
+8. j1939_session_completed:net/can/j1939/transport.c
+9. j1939_sk_queue_activate_next:net/can/j1939/socket.c
+10. j1939_session_list_lock:net/can/j1939/transport.c
+
+Response for case b96fbfdb1cf23b90ac7ee98b9c66235110e4a943
+1. red_set_parms:./include/net/red.h
+2. sfq_change:net/sched/sch_sfq.c
+3. sfq_init:net/sched/sch_sfq.c
+4. max_P:net/sched/sch_sfq.c
+5. red_check_params:./include/net/red.h
+6. qdisc_create:net/sched/sch_api.c
+7. tc_modify_qdisc:net/sched/sch_api.c
+8. red_calc_qavg_no_idle_time:./include/net/red.h
+9. red_mark_probability:./include/net/red.h
+10. Scell_log:./include/net/red.h
+
+Response for case d2ad6548d6f4f8f52f8fa250310fb027f04cfd18
+1. nl802154_trigger_scan:net/ieee802154/nl802154.c
+2. nl802154_add_llsec_devkey:net/ieee802154/nl802154.c
+3. __cfg802154_wpan_dev_from_attrs:net/ieee802154/nl802154.c
+4. __cfg802154_rdev_from_attrs:net/ieee802154/nl802154.c
+5. nl802154_pre_doit:net/ieee802154/nl802154.c
+6. genl_family_rcv_msg_doit:net/netlink/genetlink.c
+7. nl802154_new_interface:net/ieee802154/nl802154.c
+8. wpan_phy_find:net/ieee802154/core.c
+9. cfg802154_rdev_by_wpan_phy_idx:net/ieee802154/core.c
+10. nla_get_u8:include/net/netlink.h
+
+Response for case b5b251b9bcc4653c39164dfee969dafb903ae25e
+1. dummy_hub_control:drivers/usb/gadget/udc/dummy_hcd.c
+2. rh_call_control:drivers/usb/core/hcd.c
+3. hub_control:drivers/usb/core/hcd.c
+4. rh_urb_enqueue:drivers/usb/core/hcd.c
+5. usb_hcd_submit_urb:drivers/usb/core/hcd.c
+6. usb_internal_control_msg:drivers/usb/core/message.c
+7. usb_control_msg:drivers/usb/core/message.c
+8. do_proc_control:drivers/usb/core/devio.c
+9. proc_control:drivers/usb/core/devio.c
+10. usb_submit_urb:drivers/usb/core/urb.c
+
+Response for case d524c1aac21f8ea2759b6314c2e48bfa230c38b0
+1. rds_rdma_extra_size:net/rds/rdma.c
+2. rds_sendmsg:net/rds/send.c
+3. rds_rm_size:net/rds/send.c
+4. rds_cmsg_rdma_args:net/rds/rdma.c
+5. kmalloc_order_trace:mm/slab_common.c
+6. __rds_rdma_map:net/rds/rdma.c
+7. kmalloc_order:mm/slab_common.c
+8. rds_rdma_pages:net/rds/rdma.c
+9. rds_get_mr:net/rds/rdma.c
+10. rdma_args:net/rds/rdma.c
+
+Response for case cd246a3e7f0fd69a115b910b3b2cf6fa96351278
+1. nilfs_btree_get_nonroot_node:fs/nilfs2/btree.c
+2. __nilfs_btree_get_block:fs/nilfs2/btree.c
+3. nilfs_btree_insert:fs/nilfs2/btree.c
+4. nilfs_btree_alloc_path:fs/nilfs2/btree.c
+5. nilfs_btree_node_init:fs/nilfs2/btree.c
+6. nilfs_bmap_do_insert:fs/nilfs2/bmap.c
+7. nilfs_get_block:fs/nilfs2/inode.c
+8. nilfs_btree_grow:fs/nilfs2/btree.c
+9. nilfs_bmap_insert:fs/nilfs2/bmap.c
+10. nilfs_write_begin:fs/nilfs2/inode.c
+
+Response for case d21cb12ee03822236d82ba4e83a1f8968e7832fb
+1. filemap_fault:mm/filemap.c
+2. udf_file_write_iter:fs/udf/file.c
+3. __generic_file_write_iter:mm/filemap.c
+4. generic_perform_write:fs/udf/file.c
+5. folio_put_testzero:mm/filemap.c
+6. folio_put:mm/filemap.c
+7. udf_write_begin:fs/udf/inode.c
+8. udf_write_end:fs/udf/inode.c
+9. udf_get_block:fs/udf/inode.c
+10. filemap_alloc_folio:mm/filemap.c
+
+Response for case bf7780df648105d40e1fdbb0566defda3605ed93
+1. packet_sendmsg:net/packet/af_packet.c
+2. packet_parse_headers:net/packet/af_packet.c
+3. tpacket_fill_skb:net/packet/af_packet.c
+4. packet_alloc_skb:net/packet/af_packet.c
+5. skb_mac_gso_segment:net/core/gro.c
+6. __skb_gso_segment:net/core/dev.c
+7. skb_segment:net/core/skbuff.c
+8. validate_xmit_skb:net/core/dev.c
+9. __skb_pull:net/packet/af_packet.c
+10. __pskb_pull_tail:net/core/skbuff.c
+
+Response for case d92cc44e8c8ce5af6d2bea9f7a73cee791989fc8
+1. ext4_xattr_inode_set_class:fs/ext4/xattr.c
+2. ext4_xattr_inode_iget:fs/ext4/xattr.c
+3. ext4_xattr_inode_get:fs/ext4/xattr.c
+4. ext4_orphan_cleanup:fs/ext4/orphan.c
+5. __ext4_fill_super:fs/ext4/super.c
+6. ext4_fill_super:fs/ext4/super.c
+7. check_igot_inode:fs/ext4/inode.c
+8. ext4_xattr_make_inode_space:fs/ext4/xattr.c
+9. ext4_expand_extra_isize_ea:fs/ext4/xattr.c
+10. ext4_evict_inode:fs/ext4/inode.c
+
+Response for case de88544daafacdbc8ec3b2d75ca9e7e0f03346e0
+1. tcp_timeout_mark_lost:net/ipv4/tcp_input.c
+2. tcp_enter_loss:net/ipv4/tcp_input.c
+3. tcp_retransmit_timer:net/ipv4/tcp_timer.c
+4. tcp_write_timer:net/ipv4/tcp_timer.c
+5. tcp_repair_options_est:net/ipv4/tcp.c
+6. do_tcp_setsockopt:net/ipv4/tcp.c
+7. tcp_repair_set_window:net/ipv4/tcp.c
+8. tcp_mark_head_lost:net/ipv4/tcp_input.c
+9. tcp_mark_skb_lost:net/ipv4/tcp_input.c
+10. tcp_process_loss:net/ipv4/tcp_input.c
+
+Response for case e9d3ca982b76224e183481018baa693a26655ac4
+1. ext4_update_inline_data:fs/ext4/inline.c
+2. ext4_try_add_inline_entry:fs/ext4/inline.c
+3. ext4_update_inline_dir:fs/ext4/inline.c
+4. ext4_add_entry:fs/ext4/namei.c
+5. ext4_create:fs/ext4/namei.c
+6. ext4_get_max_inline_size:fs/ext4/inline.c
+7. ext4_destroy_inline_data_nolock:fs/ext4/inline.c
+8. ext4_create_inline_data:fs/ext4/inline.c
+9. __alloc_pages:mm/page_alloc.c
+10. __kmalloc_large_node:mm/slab_common.c
+
+Response for case 64bdf1f25f8db3d754e7b56c4d0f63a17edd8839
+1. j1939_session_deactivate:net/can/j1939/transport.c
+2. j1939_xtp_rx_abort_one:net/can/j1939/transport.c
+3. j1939_tp_rxtimer:net/can/j1939/transport.c
+4. __j1939_session_cancel:net/can/j1939/transport.c
+5. j1939_session_destroy:net/can/j1939/transport.c
+6. j1939_cancel_active_session:net/can/j1939/transport.c
+7. j1939_session_deactivate:net/can/j1939/socket.c
+8. j1939_sk_queue_activate_next_locked:net/can/j1939/socket.c
+9. j1939_session_activate:net/can/j1939/transport.c
+10. j1939_xtp_rx_abort:net/can/j1939/transport.c
+
+Response for case cfec079d55325bc20e929c60cc2dca149448f9b1
+1. __put_watch_queue:kernel/watch_queue.c
+2. watch_queue_set_size:kernel/watch_queue.c
+3. pipe_ioctl:fs/pipe.c
+4. kcalloc:include/linux/slab.h
+5. kmalloc_array:include/linux/slab.h
+
+Response for case 64182208616de0ae5ebd9b1652cb213485d61fce
+1. nfc_genl_se_io:net/nfc/netlink.c
+2. se_io_cb:net/nfc/netlink.c
+3. nfc_se_io:net/nfc/netlink.c
+4. hci_se_io:net/nfc/hci/core.c
+5. nfc_remove_se:net/nfc/core.c
+6. nfc_release:net/nfc/core.c
+7. nfc_genl_disable_se:net/nfc/netlink.c
+8. nfc_genl_enable_se:net/nfc/netlink.c
+9. nfc_unregister_device:net/nfc/core.c
+10. genl_family_rcv_msg_doit:net/netlink/genetlink.c
+
+Response for case 7c512c7b421b211e4408a4bc7ac759e3a3eb0d44
+1. qrtr_release:net/qrtr/qrtr.c
+2. sk_prot_free:net/core/sock.c
+3. __sk_destruct:net/core/sock.c
+4. sk_destruct:net/core/sock.c
+5. __sk_free:net/core/sock.c
+6. sk_free:net/core/sock.c
+7. __qrtr_node_release:net/qrtr/qrtr.c
+8. qrtr_endpoint_unregister:net/qrtr/qrtr.c
+9. qrtr_create:net/qrtr/qrtr.c
+10. sk_prot_alloc:net/core/sock.c
+
+Response for case 1fbd9fd0ef463a9811d2c5b7d206f119cf259601
+1. smc_sysctl_net_exit:net/smc/smc_sysctl.c
+2. __smc_sysctl_net_exit:net/smc/smc_sysctl.c
+3. smc_net_exit:net/smc/af_smc.c
+4. smc_sysctl_net_init:net/smc/smc_sysctl.c
+5. smc_sysctl_unregister:net/smc/smc_sysctl.c
+6. smc_sysctl_cleanup:net/smc/smc_sysctl.c
+7. cleanup_net:net/core/net_namespace.c
+8. ops_exit_list:net/core/net_namespace.c
+9. __unregister_pernet_operations:net/core/net_namespace.c
+10. free_nsproxy:kernel/nsproxy.c
+
+Response for case cd95cb722bfa1234ac4c78345c8953ee2e7170d0
+1. ext4_ext_binsearch_idx:fs/ext4/extents.c
+2. ext4_find_extent:fs/ext4/extents.c
+3. ext4_ext_insert_extent:fs/ext4/extents.c
+4. ext4_ext_remove_space:fs/ext4/extents.c
+5. ext4_ext_rm_leaf:fs/ext4/extents.c
+6. ext4_insert_delayed_block:fs/ext4/inode.c
+7. ext4_da_get_block_prep:fs/ext4/inode.c
+8. ext4_da_write_begin:fs/ext4/inode.c
+9. ext4_ext_get_access:fs/ext4/extents.c
+10. ext4_da_release_space:fs/ext4/inode.c
+
+Response for case f55849742bdcdf58f6eaae61e747ac00e5c061f4
+1. make_pte_marker_entry:mm/userfaultfd.c
+2. change_pte_range:mm/userfaultfd.c
+3. uffd_wp_range:mm/userfaultfd.c
+4. make_pte_marker:mm/userfaultfd.c
+5. change_protection_range:mm/userfaultfd.c
+6. make_pte_marker_entry:mm/mprotect.c
+7. change_pte_range:mm/mprotect.c
+8. userfaultfd_writeprotect:mm/userfaultfd.c
+9. handle_pte_marker:mm/memory.c
+10. mcopy_atomic_pte:mm/userfaultfd.c
+
+Response for case 802aba2422de4218ad0c01b46c9525cc9d4e4aa3
+1. nf_tables_exit_net:net/netfilter/nf_tables_api.c
+2. __nft_release_tables:net/netfilter/nf_tables_api.c
+3. __nft_release_table:net/netfilter/nf_tables_api.c
+4. __nft_release_hooks:net/netfilter/nf_tables_api.c
+5. __nft_release_hook:net/netfilter/nf_tables_api.c
+6. __nf_tables_unregister_hook:net/netfilter/nf_tables_api.c
+7. ops_exit_list:net/core/net_namespace.c
+8. nfnetlink_unbind:net/netfilter/nfnetlink.c
+9. nfnetlink_bind:net/netfilter/nfnetlink.c
+10. nft_table_lookup_byhandle:net/netfilter/nf_tables_api.c
+
+Response for case 14f3125f37b7c76896b25c222159f6c205ff7e08
+1. ieee80211_del_key:net/mac80211/cfg.c
+2. ieee80211_del_key:net/mac80211/key.c
+3. nl80211_del_key:net/wireless/nl80211.c
+4. ieee80211_add_key:net/mac80211/cfg.c
+5. ieee80211_key_replace:net/mac80211/key.c
+6. __ieee80211_set_default_key:net/mac80211/key.c
+7. __ieee80211_set_default_beacon_key:net/mac80211/key.c
+8. ieee80211_key_link:net/mac80211/key.c
+9. ieee80211_remove_key:net/mac80211/key.c
+10. del_key:net/wireless/core.c
+
+Response for case 6c4345574ac937d9ccc195fdadb44f7cc95a19f9
+1. nft_netdev_hook_alloc:net/netfilter/nf_tables_api.c
+2. nft_chain_parse_hook:net/netfilter/nf_tables_api.c
+3. nf_tables_addchain:net/netfilter/nf_tables_api.c
+4. nf_tables_newchain:net/netfilter/nf_tables_api.c
+5. __nft_release_hooks:net/netfilter/nf_tables_api.c
+6. __nft_release_hook:net/netfilter/nf_tables_api.c
+7. __nft_release_basechain:net/netfilter/nf_tables_api.c
+8. nft_delchain:net/netfilter/nf_tables_api.c
+9. nf_tables_chain_destroy:net/netfilter/nf_tables_api.c
+10. __nf_tables_abort:net/netfilter/nf_tables_api.c
+
+Response for case 76c0afb6e24e6dc4093c36801d0b3a61b486ec4d
+1. nilfs_segctor_truncate_segments:fs/nilfs2/segment.c
+2. nilfs_sufile_update:fs/nilfs2/sufile.c
+3. nilfs_segctor_do_construct:fs/nilfs2/segment.c
+4. nilfs_segctor_collect:fs/nilfs2/segment.c
+5. nilfs_sufile_set_segment_usage:fs/nilfs2/sufile.c
+6. nilfs_sufile_alloc:fs/nilfs2/sufile.c
+7. nilfs_sufile_do_free:fs/nilfs2/sufile.c
+8. nilfs_segctor_update_segusage:fs/nilfs2/segment.c
+9. nilfs_set_last_segment:fs/nilfs2/the_nilfs.c
+10. nilfs_ioctl_clean_segments:fs/nilfs2/ioctl.c
+
+Response for case e2907149c69cbccae0842eb502b8af4f6fac52a0
+1. xfs_btree_lookup_get_block:fs/xfs/libxfs/xfs_btree.c
+2. xfs_refcount_recover_cow_leftovers:fs/xfs/libxfs/xfs_refcount.c
+3. xfs_btree_lookup:fs/xfs/libxfs/xfs_btree.c
+4. xfs_refcountbt_init_cursor:fs/xfs/libxfs/xfs_refcount_btree.c
+5. xfs_btree_query_range:fs/xfs/libxfs/xfs_btree.c
+6. xfs_btree_simple_query_range:fs/xfs/libxfs/xfs_btree.c
+7. xfs_reflink_recover_cow:fs/xfs/xfs_reflink.c
+8. xlog_recover_finish:fs/xfs/xfs_log_recover.c
+9. xfs_log_mount_finish:fs/xfs/xfs_log.c
+10. xfs_mountfs:fs/xfs/xfs_mount.c
+
+Response for case 7d3c28ba3d4bf4b26e89ed1f1ca146e0223a2d36
+1. keyctl_watch_key:security/keys/keyctl.c
+2. add_watch_to_object:kernel/watch_queue.c
+3. remove_watch_from_object:kernel/watch_queue.c
+4. __put_watch_queue:kernel/watch_queue.c
+5. get_watch_queue:kernel/watch_queue.c
+6. watch_queue_clear:kernel/watch_queue.c
+7. free_pipe_info:fs/pipe.c
+8. watch_queue_pipe_buf_release:kernel/watch_queue.c
+9. key_alloc:security/keys/key.c
+10. keyring_alloc:security/keys/keyring.c
+
+Response for case 6bb7224cd01f8742533b486573005f65d512fdf6
+1. sctp_sched_prio_set:net/sctp/stream_sched_prio.c
+2. sctp_sched_prio_new_head:net/sctp/stream_sched_prio.c
+3. sctp_sched_prio_get_head:net/sctp/stream_sched_prio.c
+4. sctp_sched_prio_free:net/sctp/stream_sched_prio.c
+5. sctp_sched_set_sched:net/sctp/stream_sched.c
+6. sctp_stream_init_ext:net/sctp/stream.c
+7. sctp_sched_init_sid:net/sctp/stream_sched.c
+8. sctp_setsockopt_scheduler:net/sctp/socket.c
+9. sctp_sched_prio_sched_all:net/sctp/stream_sched_prio.c
+10. sctp_association_destroy:net/sctp/associola.c
+
+Response for case 2e1943a94647f7732dd6fc60368642d6e8dc91b1
+1. hci_disconn_loglink_complete_evt:net/bluetooth/hci_event.c
+2. hci_event_packet:net/bluetooth/hci_event.c
+3. l2cap_move_channel_rsp:net/bluetooth/l2cap_core.c
+4. l2cap_move_fail:net/bluetooth/l2cap_core.c
+5. hci_send_acl:net/bluetooth/hci_core.c
+6. hci_chan_create:net/bluetooth/hci_conn.c
+7. l2cap_bredr_sig_cmd:net/bluetooth/l2cap_core.c
+8. l2cap_sig_channel:net/bluetooth/l2cap_core.c
+9. hci_rx_work:net/bluetooth/hci_core.c
+10. l2cap_recv_frame:net/bluetooth/l2cap_core.c
+
+Response for case bf3e592d3ed61b8f86b8ffba072adcde5485a5f6
+1. fanotify_handle_event:fs/notify/fanotify/fanotify.c
+2. fanotify_alloc_event:fs/notify/fanotify/fanotify.c
+3. __io_complete_rw_common:io_uring/rw.c
+4. fanotify_alloc_fid_event:fs/notify/fanotify/fanotify.c
+5. iomap_dio_bio_end_io:fs/iomap/direct-io.c
+6. send_to_group:fs/notify/fsnotify.c
+7. fsnotify_access:io_uring/rw.c
+8. io_complete_rw:io_uring/rw.c
+9. fanotify_merge:fs/notify/fanotify/fanotify.c
+10. __fsnotify_parent:fs/notify/fsnotify.c
+
+Response for case 362b5b49fced29361c0ba3007a2b3e5cd13776b5
+1. ucma_close_id:drivers/infiniband/core/ucma.c
+2. ucma_destroy_private_ctx:drivers/infiniband/core/ucma.c
+3. _destroy_id:drivers/infiniband/core/cma.c
+4. cma_listen_on_all:drivers/infiniband/core/cma.c
+5. rdma_listen:drivers/infiniband/core/cma.c
+6. ucma_listen:drivers/infiniband/core/ucma.c
+7. cma_release_dev:drivers/infiniband/core/cma.c
+8. cma_release_port:drivers/infiniband/core/cma.c
+9. __rdma_create_id:drivers/infiniband/core/cma.c
+10. ucma_write:drivers/infiniband/core/ucma.c
+
+Response for case ee107e687b29b99d101ba328f28abfad4e58a91a
+1. bsg_unregister_queue:block/bsg.c
+2. bsg_register_queue:block/bsg.c
+3. bsg_destroy_device:block/bsg.c
+4. bsg_cleanup_queue:block/bsg.c
+5. bsg_remove_device:block/bsg.c
+6. scsi_sysfs_add_sdev:drivers/scsi/scsi_sysfs.c
+7. scsi_finish_async_scan:drivers/scsi/scsi_scan.c
+8. do_scan_async:drivers/scsi/scsi_scan.c
+9. bsg_release:block/bsg.c
+10. __scsi_remove_device:drivers/scsi/scsi_sysfs.c
+
+Response for case e58343393efd3e0657ca37cf4466fc38d1f4d4df
+1. put_sg_table:drivers/dma-buf/udmabuf.c
+2. release_udmabuf:drivers/dma-buf/udmabuf.c
+3. udmabuf_create:drivers/dma-buf/udmabuf.c
+4. get_sg_table:drivers/dma-buf/udmabuf.c
+5. udmabuf_ioctl_create:drivers/dma-buf/udmabuf.c
+6. sg_alloc_table:drivers/dma-buf/udmabuf.c
+7. sg_free_table:drivers/dma-buf/udmabuf.c
+8. udmabuf_ioctl_create_list:drivers/dma-buf/udmabuf.c
+9. dma_buf_release:drivers/dma-buf/dma-buf.c
+10. __fput:fs/file_table.c
+
+Response for case daa1858cc0258eb026f89eecf342f6b3fdad7b05
+1. em_cmp_match:net/sched/em_cmp.c
+2. tcf_em_match:net/sched/ematch.c
+3. __tcf_em_tree_match:net/sched/ematch.c
+4. basic_classify:net/sched/cls_basic.c
+5. em_cmp_change:net/sched/em_cmp.c
+6. tcf_em_tree_validate:net/sched/ematch.c
+7. em_cmp_destroy:net/sched/em_cmp.c
+8. tcf_em_tree_destroy:net/sched/ematch.c
+9. tc_new_tfilter:net/sched/cls_api.c
+10. basic_change:net/sched/cls_basic.c
+
+Response for case a1a049fcf154a2c466232111c09a030ac656a833
+1. calculate_skb_padding:drivers/net/wireguard/send.c
+2. encrypt_packet:drivers/net/wireguard/send.c
+3. wg_packet_encrypt_worker:drivers/net/wireguard/send.c
+4. wg_packet_create_data:drivers/net/wireguard/send.c
+5. wg_xmit:drivers/net/wireguard/device.c
+6. encrypt_packet:drivers/net/wireguard/queueing.c
+7. crypto_aead_setkey:crypto/aead.c
+8. wg_newlink:drivers/net/wireguard/device.c
+9. skb_put:net/core/skbuff.c
+10. skb_push:net/core/skbuff.c
+
+Response for case 223c64b1a2c03f0d67d64fdf69606ee2d5e26672
+1. batadv_nc_mesh_free:net/batman-adv/network-coding.c
+2. batadv_nc_mesh_init:net/batman-adv/network-coding.c
+3. batadv_nc_init_bat_priv:net/batman-adv/network-coding.c
+4. do_init_timer:kernel/time/timer.c
+5. __cancel_work_timer:kernel/workqueue.c
+6. batadv_nc_worker:net/batman-adv/network-coding.c
+7. del_timer:kernel/time/timer.c
+8. batadv_mesh_free:net/batman-adv/main.c
+9. batadv_mesh_init:net/batman-adv/main.c
+10. batadv_softif_init_late:net/batman-adv/soft-interface.c
+
+Response for case f7c5a86e747f9b7ce333e7295875cd4ede2c7a0d
+1. xdp_umem_pin_pages:net/xdp/xdp_umem.c
+2. xdp_umem_reg:net/xdp/xdp_umem.c
+3. xdp_umem_create:net/xdp/xdp_umem.c
+4. xsk_setsockopt:net/xdp/xsk.c
+5. kvcalloc:include/linux/slab.h
+6. kvmalloc_node:mm/util.c
+7. kvmalloc_array:include/linux/slab.h
+8. kvmalloc_node:net/xdp/xdp_umem.c
+9. __sys_setsockopt:net/socket.c
+10. xsk_setsockopt:net/core/sock.c
+
+Response for case f1d54f488af5e3967ea8e664e514cb1c2820db45
+1. __clear_extent_bit:fs/btrfs/extent-io-tree.c
+2. split_state:fs/btrfs/extent-io-tree.c
+3. convert_extent_bit:fs/btrfs/extent-io-tree.c
+4. insert_state:fs/btrfs/extent-io-tree.c
+5. merge_state:fs/btrfs/extent-io-tree.c
+6. btrfs_release_folio:fs/btrfs/inode.c
+7. try_release_extent_state:fs/btrfs/extent_io.c
+8. try_release_extent_mapping:fs/btrfs/extent_io.c
+9. mapping_evict_folio:mm/truncate.c
+10. btrfs_set_extent_delalloc:fs/btrfs/inode.c
+
+Response for case 11cb6eec3ac0b37e657e8af0612342e140379e49
+1. vhci_write:drivers/bluetooth/hci_vhci.c
+2. vhci_get_user:drivers/bluetooth/hci_vhci.c
+3. vhci_send_frame:drivers/bluetooth/hci_vhci.c
+4. vhci_release:drivers/bluetooth/hci_vhci.c
+5. vhci_open:drivers/bluetooth/hci_vhci.c
+6. hci_send_frame:net/bluetooth/hci_core.c
+7. hci_recv_frame:net/bluetooth/hci_core.c
+8. bt_skb_alloc:include/net/bluetooth/bluetooth.h
+9. __alloc_skb:net/core/skbuff.c
+10. l2cap_recv_acldata:net/bluetooth/l2cap_core.c
+
+Response for case f1b41b503f18f268d11e52f80deffcd0c62e0865
+1. sta_info_insert_check:net/mac80211/sta_info.c
+2. sta_info_insert_rcu:net/mac80211/sta_info.c
+3. ieee80211_ibss_finish_sta:net/mac80211/ibss.c
+4. ieee80211_ibss_work:net/mac80211/ibss.c
+5. sta_info_alloc:net/mac80211/sta_info.c
+6. ieee80211_sta_create_ibss:net/mac80211/ibss.c
+7. __ieee80211_sta_join_ibss:net/mac80211/ibss.c
+8. ieee80211_iface_work:net/mac80211/iface.c
+9. sta_info:net/mac80211/sta_info.c
+10. ieee80211_sta_join_ibss:net/mac80211/ibss.c
+
+Response for case 0784eb04ffd5b9955880826669badef2ffb32285
+1. btrfs_dio_end_io:fs/btrfs/inode.c
+2. btrfs_finish_ordered_extent:fs/btrfs/ordered-data.c
+3. btrfs_dio_iomap_end:fs/btrfs/inode.c
+4. btrfs_start_ordered_extent:fs/btrfs/ordered-data.c
+5. btrfs_create_dio_extent:fs/btrfs/inode.c
+6. btrfs_dio_write:fs/btrfs/file.c
+7. btrfs_dio_submit_io:fs/btrfs/inode.c
+8. btrfs_get_blocks_direct_write:fs/btrfs/inode.c
+9. btrfs_put_ordered_extent:fs/btrfs/ordered-data.c
+10. btrfs_dio_iomap_begin:fs/btrfs/inode.c
+
+Response for case ab98490c0e3b48a71b7c203ee51366c99ceeda84
+1. nf_tables_newflowtable:net/netfilter/nf_tables_api.c
+2. nft_unregister_flowtable_net_hooks:net/netfilter/nf_tables_api.c
+3. nf_tables_flowtable_destroy:net/netfilter/nf_tables_api.c
+4. nf_tables_abort_release:net/netfilter/nf_tables_api.c
+5. nft_commit_release:net/netfilter/nf_tables_api.c
+6. __nf_tables_abort:net/netfilter/nf_tables_api.c
+7. nft_trans_flowtable_add:net/netfilter/nf_tables_api.c
+8. nft_netdev_register_hooks:net/netfilter/nf_tables_api.c
+9. nft_register_flowtable_net_hooks:net/netfilter/nf_tables_api.c
+10. nft_netdev_hook_alloc:net/netfilter/nf_tables_api.c
+
+Response for case deb061ff946b02c2f4821f91683d89a68b2f45f8
+1. hfsplus_cat_write_inode:fs/hfsplus/inode.c
+2. hfsplus_new_inode:fs/hfsplus/inode.c
+3. hfsplus_create_cat:fs/hfsplus/catalog.c
+4. hfsplus_iget:fs/hfsplus/super.c
+5. hfsplus_fill_super:fs/hfsplus/super.c
+6. hfsplus_cat_read_inode:fs/hfsplus/inode.c
+7. hfsplus_setattr:fs/hfsplus/inode.c
+8. write_inode:fs/fs-writeback.c
+9. __writeback_single_inode:fs/fs-writeback.c
+10. hfsplus_delete_inode:fs/hfsplus/inode.c
+
+Response for case e6028c53b349b6a97a83fe01a2013ac52db59710
+1. p9_read_work:net/9p/trans_fd.c
+2. p9_fd_read:net/9p/trans_fd.c
+3. v9fs_file_read_iter:fs/9p/vfs_file.c
+4. p9_fd_create:net/9p/trans_fd.c
+5. p9_conn_create:net/9p/trans_fd.c
+6. __kernel_read:fs/read_write.c
+7. p9_read_work:fs/9p/vfs_file.c
+8. read_work:net/9p/trans_fd.c
+9. p9_fd_read:fs/9p/vfs_file.c
+10. tty_open:drivers/tty/tty_io.c
+
+Response for case 95277dbea9484baea60662d0243a93011a21ceb5
+1. __ebt_unregister_table:net/bridge/netfilter/ebtables.c
+2. ebt_unregister_table:net/bridge/netfilter/ebtables.c
+3. ebt_cleanup_entry:net/bridge/netfilter/ebtables.c
+4. ebt_cleanup_match:net/bridge/netfilter/ebtables.c
+5. ebt_cleanup_watcher:net/bridge/netfilter/ebtables.c
+6. do_replace:net/bridge/netfilter/ebtables.c
+7. ebt_check_entry:net/bridge/netfilter/ebtables.c
+8. __ebt_unregister_table:net/bridge/netfilter/ebt_dnat.c
+9. ebt_unregister_table:net/bridge/netfilter/ebt_dnat.c
+10. translate_table:net/bridge/netfilter/ebtables.c
+
+Response for case d58fe2a53afa4ffbfaf3df368acb70d137e46c9f
+1. inline_data_addr:fs/f2fs/f2fs.h
+2. __recover_inline_status:fs/f2fs/inode.c
+3. do_read_inode:fs/f2fs/inode.c
+4. f2fs_iget:fs/f2fs/inode.c
+5. f2fs_fill_super:fs/f2fs/super.c
+6. validate_checkpoint:fs/f2fs/checkpoint.c
+7. f2fs_get_valid_checkpoint:fs/f2fs/checkpoint.c
+8. sanity_check_raw_super:fs/f2fs/super.c
+9. f2fs_sanity_check_ckpt:fs/f2fs/super.c
+10. __get_nat_bitmaps:fs/f2fs/node.c
+
+Response for case ffb9228cab75ad9d812af93d19e9637873d18439
+1. ipgre_xmit:net/ipv4/ip_gre.c
+2. bpf_clone_redirect:net/core/filter.c
+3. __bpf_redirect:net/core/filter.c
+4. __bpf_redirect_no_mac:net/core/filter.c
+5. __bpf_tx_skb:net/core/filter.c
+6. skb_transport_header:net/core/skbuff.c
+7. skb_transport_offset:net/core/skbuff.c
+8. __gre_xmit:net/ipv4/ip_gre.c
+9. bpf_prog_test_run_skb:net/bpf/test_run.c
+10. skb_do_redirect:net/core/filter.c
+

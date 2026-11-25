@@ -1,0 +1,15 @@
+# large knowledge bases are published as a release asset, not tracked by git
+data/*.db
+*.zip
+*.tar.gz
+
+# local configuration / secrets
+.env
+
+# runtime outputs
+runs/
+localization_runs/
+output_patches/
+__pycache__/
+*.pyc
+*.log
