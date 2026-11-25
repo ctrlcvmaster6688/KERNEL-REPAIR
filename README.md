@@ -37,49 +37,9 @@ treat any other environment as untested/unsupported.**
 | GPU | **4× NVIDIA GeForce RTX 3090 (24 GiB each)**, driver 570.211.01, CUDA 12.8 |
 | Disk | `/data` on a 29 TB volume (≈ 4.6 TB free at the time) |
 | KVM | `/dev/kvm` present (QEMU guests run with `-enable-kvm`) |
-| Python | **3.10.19** (conda, used for everything); 3.12.3 (system, only used for `compileall`) |
+| Python | **3.10.19** |
 | Toolchain | git 2.43.0, gcc 11.5.0 (Ubuntu), GNU Make 4.3, rsync 3.2.7, QEMU 8.2.2, GNU cflow 1.7 |
-| Go | **go1.25.5 linux/amd64** (`/usr/local/go/bin/go`; only on `PATH` via `~/.zshrc` — see the note below) |
-| Network | DNS resolves, but **outbound TCP was blocked** at packaging time (80/443/22/9418 time out; loopback and the LAN work). If this host has no direct egress, see the proxy block in `.env.example` |
-
-What this implies for a different machine:
-
-* **Linux x86_64 with KVM is required.** Both halves boot an x86_64 QEMU guest
-  and validate patches inside it. Windows, macOS and ARM hosts were never tried.
-* **GPUs.** The BGE-M3 service defaults to `cuda:1` when ≥2 GPUs are visible,
-  `cuda:0` with one and `cpu` with none (`COHIKER_EMBED_DEVICE`). The CPU path
-  works but is much slower and was not benchmarked here. CUDA 12.8 +
-  torch 2.10.0+cu128 is the only combination we ran.
-* **Memory.** The default `COHIKER_NUM_CORES=20` peaks around 30–40 GB during a
-  kernel build (§7.2). The reference machine has 503 GiB; on a smaller box lower
-  `COHIKER_NUM_CORES` (8 → ≈15 GB) or expect OOM kills.
-* **Disk.** A full kernel clone is ≈5.7 GB, each warmed build snapshot ≈10 GB and
-  each QEMU image ≈2 GB — plan for tens of GB per worker.
-* **Go is only needed when syzkaller has to be built**, and `go` must be on the
-  `PATH` of the *invoking* shell: `core/syz_manager.py` runs `make` in the
-  syzkaller checkout, whose Makefile calls `go`. On the reference machine Go
-  lives at `/usr/local/go/bin/go` and is exported only from `~/.zshrc`, i.e. a
-  non-interactive shell (`ssh host 'bash run_pipeline.sh ...'`, cron, systemd)
-  would **not** see it. Export it first:
-
-  ```bash
-  export PATH=$PATH:/usr/local/go/bin GOPATH=$HOME/go
-  ```
-
-  The reference environment also ships pre-built checkouts
-  (`bin/linux_amd64/syz-execprog`, `syz-executor`), so the rebuild path is only
-  taken when `syz_branch.txt` asks for a different syzkaller commit.
-* **Python 3.10** is what everything was executed with; the code is not tested on
-  other minor versions.
-
-* **Network on the reference machine: DNS resolves but every outbound TCP
-  connection is blocked** (ports 80/443/22/9418 time out; loopback and the LAN
-  work). `pip install`, `git clone`, weight downloads and LLM calls therefore
-  have to be done on a connected machine — or through a proxy — and copied over.
-  The runs recorded in this package were made when outbound access was available;
-  on the packaging host only the offline parts could be re-verified
-  (`compileall`, `--help`, preflight, `--dry-run`, localization export/root-cause,
-  the embedding service over loopback, and QEMU guests over hostfwd).
+| Go | **go1.25.5 linux/amd64** |
 
 If your environment differs in any of the rows above, expect to adapt paths,
 driver/CUDA versions or parallelism — the functionality may still work, but we
@@ -143,19 +103,6 @@ results), so `--mode repair` works out of the box for those 210 cases.
    `requirements.txt` lists everything (§9 has the notes); on a CUDA host install
    the matching torch build first, e.g.
    `pip install torch --index-url https://download.pytorch.org/whl/cu124`.
-
-   **No direct internet?** Export the proxy first — `pip`, `git` and the LLM
-   client honour it (the embedding clients do not, §6.3):
-
-   ```bash
-   export http_proxy=http://<proxy-host>:<port>
-   export https_proxy=http://<proxy-host>:<port>
-   export HF_ENDPOINT=https://hf-mirror.com     # if huggingface.co is blocked
-   ```
-
-   They can also live in `.env` (the commented block there): `paths.py`
-   injects `.env` into `os.environ`, so every process the pipeline spawns —
-   `pip`, `git`, and the `httpx`-based LLM client — sees them.
 
 2. **Linux kernel source — a full git checkout, not a tarball**
 
@@ -833,8 +780,7 @@ the host: `http://<embedding-host>:6001/embed`.
 
 Consequently an embedding service that is only reachable **through** an HTTP
 proxy cannot be used: run it on the machine that executes the pipeline, or on
-one that is directly reachable from there (this is the one network hop the
-proxy block in `.env.example` does not cover).
+one that is directly reachable from there.
 
 ### 6.4 Failure behaviour (important)
 
