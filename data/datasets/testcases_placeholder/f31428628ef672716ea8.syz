@@ -1,0 +1,1 @@
+{"example":["r0 = socket$qrtr(0x2a, 0x2, 0x0)\nbind$qrtr(r0, \u0026(0x7f0000001380)={0x2a, 0x1, 0xffffe000}, 0xc)\n"],"definition":["socket$qrtr(domain const[AF_QIPCRTR], type const[SOCK_DGRAM], proto const[0]) sock_qrtr\n","bind$qrtr(fd sock_qrtr, addr ptr[in, sockaddr_qrtr], addrlen len[addr])\n"],"flags":{"AF_QIPCRTR":["2a"],"SOCK_DGRAM":["2"]},"placeholders":{}}

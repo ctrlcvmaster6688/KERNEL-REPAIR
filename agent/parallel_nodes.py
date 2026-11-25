@@ -18,6 +18,7 @@ from agent.log_manager import get_logger
 from config import Config
 from utils.llm_interface import call_llm
 from utils.file_ops import extract_json_from_text
+from utils.tool_text_parser import parse_text_tool_calls
 from tool.function_calls import read_kernel_file, get_function_context, get_function_body, get_function_related_info, get_related_files, explore_ast_semantics
 from tool.kernel_doc import query_kernel_api
 
@@ -559,10 +560,19 @@ def generate_multiple_candidate_hypotheses(
         while tool_call_count < max_tool_calls:
             try:
                 tool_call_data = extract_json_from_text(current_response)
+                _tool_call = None
                 if tool_call_data and isinstance(tool_call_data, dict) and "tool_call" in tool_call_data:
                     tool_call = tool_call_data["tool_call"]
-                    tool_name = tool_call["name"]
-                    tool_params = tool_call["params"]
+                    _tool_call = {"name": tool_call["name"], "params": tool_call["params"]}
+                else:
+                    # text-mode tool calls (deepseek-flash DSML markup, see utils/tool_text_parser.py)
+                    _text_calls = parse_text_tool_calls(current_response)
+                    if _text_calls:
+                        _tool_call = _text_calls[0]
+
+                if _tool_call:
+                    tool_name = _tool_call["name"]
+                    tool_params = _tool_call["params"]
 
                     # 检查是否已经调用过相同的工具和参数
                     tool_call_key = f"{tool_name}:{json.dumps(tool_params, sort_keys=True)}"

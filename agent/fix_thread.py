@@ -23,6 +23,7 @@ from agent.state import (
     MAX_THREAD_ATTEMPTS_WITH_FUNCTIONS, MAX_TOTAL_ATTEMPTS_WITH_FUNCTIONS
 )
 from agent.log_manager import get_logger
+from utils.tool_text_parser import parse_text_tool_calls
 from agent.prompts import (
     GENERATOR_SYSTEM_PROMPT, REVIEWER_SYSTEM_PROMPT, JUDGE_SYSTEM_PROMPT
 )
@@ -354,11 +355,23 @@ JSON FORMAT REQUIREMENTS:
 
                 while tool_call_count < max_tool_calls:
                     patch_data = extract_json_from_text(current_response)
-
+                    _tool_call = None
                     if patch_data and "tool_call" in patch_data:
-                        tool_call = patch_data["tool_call"]
-                        tool_name = tool_call.get("name") or tool_call.get("tool", "")
-                        tool_params = tool_call.get("params") or tool_call.get("args", {})
+                        _tc = patch_data["tool_call"]
+                        _tool_call = {
+                            "name": _tc.get("name") or _tc.get("tool", ""),
+                            "params": _tc.get("params") or _tc.get("args", {}),
+                        }
+                    else:
+                        # deepseek-flash and friends write the chat-template tool syntax as
+                        # plain text; accept that too (utils/tool_text_parser.py)
+                        _text_calls = parse_text_tool_calls(current_response)
+                        if _text_calls:
+                            _tool_call = _text_calls[0]
+
+                    if _tool_call:
+                        tool_name = _tool_call["name"]
+                        tool_params = _tool_call["params"]
 
                         if tool_name == "query_golden_fixes" and "kernel_commit" not in tool_params:
                             tool_params["kernel_commit"] = kernel_commit

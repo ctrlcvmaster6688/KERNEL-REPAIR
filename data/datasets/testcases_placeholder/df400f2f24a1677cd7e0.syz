@@ -1,0 +1,1 @@
+{"example":["unshare(0x40000200)\n"],"definition":["unshare(flags flags[unshare_flags])\n"],"flags":{"unshare_flags":["1024","512","33554432","134217728","1073741824","131072","536870912","268435456","67108864","262144","65536","2048","256","128"]},"placeholders":{}}

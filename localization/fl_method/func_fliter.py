@@ -22,6 +22,7 @@ from pathlib import Path
 # every absolute path comes from the repository paths.py.
 sys.path.append(str(Path(os.path.abspath(__file__)).parent.parent))
 from llm import LLMHelper  # noqa: E402
+from settings import DATASETS_DIR  # noqa: E402
 
 output_lock = threading.Lock()
 llm_helper = LLMHelper()
@@ -220,7 +221,7 @@ def find_case_file(folder, syzid, extensions):
 
 if __name__ == "__main__":
     model_path = "filter_model.pt"
-    default_commit_path = "../../datasets/case_commit.txt"
+    default_commit_path = str(Path(DATASETS_DIR) / "case_commit.txt")
     parser = argparse.ArgumentParser(description="Evaluate Fault Localization Metrics")
     parser.add_argument('--case_list', required=True, help='Path to the case list ')
     parser.add_argument('--work_dir', required=True, help='Path to linux kernel')

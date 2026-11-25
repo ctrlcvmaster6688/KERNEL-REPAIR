@@ -27,6 +27,19 @@ set -uo pipefail
 # __pycache__ next to the sources.
 export PYTHONDONTWRITEBYTECODE=1
 
+# Go is only needed to (re)build syzkaller; a non-login shell (ssh, cron,
+# systemd) often has Go installed but not exported (it lives in ~/.zshrc).
+# Prepend the standard install locations when `go` is missing from PATH.
+if ! command -v go >/dev/null 2>&1; then
+    for _go_dir in /usr/local/go/bin "${HOME}/go/bin" /usr/lib/go/bin /opt/go/bin; do
+        if [ -x "${_go_dir}/go" ]; then
+            export PATH="${_go_dir}:${PATH}"
+            break
+        fi
+    done
+    unset _go_dir
+fi
+
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 if [[ -z "${PYTHON:-}" ]]; then
     PYTHON="$(command -v python || command -v python3 || true)"

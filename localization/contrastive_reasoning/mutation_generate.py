@@ -22,6 +22,7 @@ from tqdm import tqdm
 # every absolute path comes from the repository paths.py.
 sys.path.append(str(Path(os.path.abspath(__file__)).parent.parent))
 from llm import LLMHelper  # noqa: E402
+from settings import DATASETS_DIR  # noqa: E402  (single source of truth)
 
 MAX_RETRIES = 3
 MAX_INPUT_LENGTH = 61000
@@ -92,7 +93,7 @@ def replace_placeholders(content, bug_report, code_line, sys_msg):
 
 def replace_image_strings(syzid: str, text: str):
     # for syz_content has huge image, replace the IMAGE before using LLM.
-    placeholder_path = Path(f"../../datasets/testcases_placeholder/{syzid}.syz")
+    placeholder_path = Path(DATASETS_DIR) / "testcases_placeholder" / f"{syzid}.syz"
     if not placeholder_path.exists():
         return text
     with open(placeholder_path, "r") as f:
@@ -136,7 +137,7 @@ def replace_image_strings(syzid: str, text: str):
 
 
 def replace_string_images(syzid, content: str) -> str:
-    placeholder_path = Path(f"../../datasets/testcases_placeholder/{syzid}.syz")
+    placeholder_path = Path(DATASETS_DIR) / "testcases_placeholder" / f"{syzid}.syz"
     if not placeholder_path.exists():
         return content
     with open(placeholder_path, "r") as f:
@@ -173,6 +174,28 @@ def extract_mutations_from_content(content):
         output += f"// Original: {origin_line.strip()}\n"
         output += f"{mutated_line.strip()}\n\n"
     return output
+
+
+def mutations_from_payload(payload: Optional[Dict[str, Any]]) -> str:
+    """Build the text block consumed by ``parse_mutations`` from the parsed JSON.
+
+    Some models return the mutations only inside the JSON payload (``standard_output``)
+    and the regex in :func:`extract_mutations_from_content` needs one exact key order,
+    so it can come back empty even though the payload is fine.  Emit the same
+    ``// Original: ...`` format here as a fallback.
+    """
+    payload = ensure_dict(payload)
+    items = payload.get("standard_output") or []
+    blocks = []
+    for idx, item in enumerate(items, start=1):
+        if not isinstance(item, dict):
+            continue
+        origin = " ".join(normalize_text(item.get("origin")).split())
+        mutated = " ".join(normalize_text(item.get("mutated")).split())
+        if not origin or not mutated:
+            continue
+        blocks.append(f"// Mutation {idx}\n// Original: {origin}\n{mutated}\n")
+    return "\n".join(blocks)
 
 
 def extract_json_payload(raw_text: str) -> Optional[Dict[str, Any]]:
@@ -387,7 +410,7 @@ def process_entry(entry, report_folder, testcase_folder, base_prompt, standard_o
     # print(syz_content)
     syscall_list = extract_syscalls(syz_content)
 
-    syscall_description = extract_and_write_by_id("../../datasets/syscall_description.txt", syzid)
+    syscall_description = extract_and_write_by_id(str(Path(DATASETS_DIR) / "syscall_description.txt"), syzid)
     # Here, to avoid introducing new dependencies, we have prepared the syscall descriptions in advance.
     # If you wish to generate them yourself, please refer to the link: https://github.com/google/syzkaller/tree/master/sys/linux .
     prompt = replace_placeholders(base_prompt, report_content, syz_content, syscall_description)
@@ -413,6 +436,9 @@ def process_entry(entry, report_folder, testcase_folder, base_prompt, standard_o
             payload = extract_json_payload(result)
             analysis_record = build_analysis_record(payload, syzid)
             mutation_result_extract = extract_mutations_from_content(result)
+            if not mutation_result_extract.strip():
+                # model returned the mutations only as JSON -> synthesise the text form
+                mutation_result_extract = mutations_from_payload(payload)
             mutation_result = replace_string_images(syzid, mutation_result_extract)
             with output_lock:
                 with open(output_file, "a", encoding="utf-8") as output:
