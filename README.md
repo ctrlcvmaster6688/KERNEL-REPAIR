@@ -104,8 +104,35 @@ results), so `--mode repair` works out of the box for those 210 cases.
 
 ### 0.1 Install and prepare (one time)
 
-> Cloned this repository from GitHub? Start with the knowledge-base download in
-> §3 — the two `.db` files are a release asset, not part of the git tree.
+0. **Knowledge bases — the two SQLite files must sit under `data/`**
+
+   Both halves open them at `data/<name>` (§2.1), so the file names matter:
+
+   | file | size | used for |
+   |---|---|---|
+   | `data/kernel_patch_final_rag_v3.db` | 93 MB | case-level semantic KB — `search_historical_fixes` |
+   | `data/golden_kernel_test_v3.db` | 261 MB | golden-patch KB — `query_golden_fixes` (hard dependency) |
+
+   * **Using the paper artifact zip (`repro_package.zip`)?** Nothing to do, both
+     files are already inside.
+   * **Cloned the git repository?** They are *not* tracked by git (one file is
+     above GitHub's 100 MB limit). Download the release asset **once** and unpack
+     it **at the repository root**:
+
+     ```bash
+     curl -L -o /tmp/knowledge_bases.zip \
+       https://github.com/ctrlcvmaster6688/LLM-based-fault-localization-for-linux-kernel/releases/download/v1.0.0/knowledge_bases.zip
+     unzip -o /tmp/knowledge_bases.zip -d .     # writes data/*.db
+     ls -lh data/*.db                           # expect 93M and 261M
+     ```
+
+     The download is 151 MB; unpacked the two databases take ≈350 MB. They must
+     end up next to `paths.py` (i.e. `<repo>/data/`); if you keep them elsewhere,
+     point `GOLDEN_DB_PATH` at the golden DB and adjust `DB_PATH` in `paths.py`
+     for the other one.
+
+   Without them, `--mode repair` fails at the first KB query; the localization
+   half alone only needs the embedding service (§6).
 
 1. **Python dependencies** — one command
 
@@ -597,19 +624,11 @@ are `kernel_patch_final_rag_v3.db` (semantic / historical fixes, used by
 `search_historical_fixes`) and `golden_kernel_test_v3.db` (golden fixes, used by
 `query_golden_fixes`).
 
-> **Cloned the repository from GitHub?** The two SQLite knowledge bases
-> (~350 MB together, and one of them is above GitHub's 100 MB per-file limit) are
-> published as a **release asset** instead of being tracked by git. Fetch and
-> unpack it at the repository root once:
->
-> ```bash
-> curl -L -o /tmp/knowledge_bases.zip \
->   https://github.com/ctrlcvmaster6688/LLM-based-fault-localization-for-linux-kernel/releases/download/v1.0.0/knowledge_bases.zip
-> unzip -o /tmp/knowledge_bases.zip -d .        # writes data/*.db
-> ```
->
-> The artifact archive distributed with the paper already contains them, so this
-> step only applies to a git clone.
+> **Cloned the repository from GitHub?** These two files are published as the
+> `knowledge_bases.zip` **release asset** instead of being tracked by git (one is
+> above GitHub's 100 MB per-file limit). Download and unpack it at the repository
+> root once — the exact commands and expected sizes are in **§0.1 step 0**. The
+> artifact zip distributed with the paper already contains them.
 
 
 `data/datasets/` is a partial mirror provided for convenience: it holds the
