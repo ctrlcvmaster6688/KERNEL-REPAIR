@@ -136,8 +136,8 @@ results), so `--mode repair` works out of the box for those 210 cases.
    **Each worker needs its own clone**: `core/syz_manager.py` runs
    `git checkout <commit>` and `make` inside that directory, so concurrent
    workers sharing one clone would corrupt each other. It needs a **Go toolchain
-   ≥ 1.20** on `PATH` (see the Go note above). You do not have to build it by
-   hand — the pipeline does it — but each clone ends up with its own
+   ≥ 1.20** on the `PATH` of the shell that runs the pipeline. You do not have to
+   build it by hand — the pipeline does it — but each clone ends up with its own
    `bin/linux_amd64/syz-execprog` + `syz-executor`.
 
 4. **QEMU image + ssh key — one directory per worker (N directories)**
