@@ -1,9 +1,8 @@
-# keep shell scripts LF so they run on Linux after a clone on Windows
+# keep shell scripts and python sources LF so they run on Linux after a clone
+# (a CRLF shell script breaks `bash run_pipeline.sh` on Linux)
 * text=auto
 *.sh   text eol=lf
 *.py   text eol=lf
-*.txt  text eol=lf
-*.json text eol=lf
 *.md   text eol=lf
 *.cff  text eol=lf
 *.yml  text eol=lf
@@ -13,6 +12,13 @@
 *.idx  -text -diff
 *.so   -text -diff
 *.pt   -text -diff
+
+# experiment inputs (data/) must stay byte-identical to what the runs used:
+# no EOL normalisation, no diff conversion.  These data files really do contain
+# CRLF (kernel .config files, .syz reproducers, crash reports) and the pipeline
+# was validated with exactly those bytes, so git must not rewrite them.
+# NOTE: later rules override earlier ones -- keep this block last.
+data/**  -text -diff
 
 # If you prefer keeping the knowledge bases inside the repository instead of a
 # release asset, install git-lfs, use these two lines instead of `data/*.db`
