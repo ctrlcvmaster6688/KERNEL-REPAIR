@@ -81,7 +81,7 @@ results), so `--mode repair` works out of the box for those 210 cases.
 
      ```bash
      curl -L -o /tmp/knowledge_bases.zip \
-       https://github.com/ctrlcvmaster6688/LLM-based-fault-localization-for-linux-kernel/releases/download/v1.0.0/knowledge_bases.zip
+       https://github.com/ctrlcvmaster6688/LLM-based-fault-localization-for-linux-kernel/releases/download/v1.0.1/knowledge_bases.zip
      unzip -o /tmp/knowledge_bases.zip -d .     # writes data/*.db
      ls -lh data/*.db                           # expect 93M and 261M
      ```
